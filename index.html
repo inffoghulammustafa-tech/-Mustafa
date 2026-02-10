@@ -15,6 +15,22 @@
         .font-arabic {
             font-family: 'Amiri', serif;
         }
+
+        /* Marquee Animation Logic */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-container {
+            display: flex;
+            width: fit-content;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee-container:hover {
+            animation-play-state: paused;
+        }
     </style>
 <script type="importmap">
 {
