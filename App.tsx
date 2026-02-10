@@ -21,9 +21,45 @@ const App: React.FC = () => {
       return (
         <>
           <Hero />
+
+          {/* Featured Service Section - Text below image layout */}
+          <section className="py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <h2 className="text-emerald-600 font-black uppercase tracking-[0.2em] text-sm mb-4">Our Specialization</h2>
+                <h3 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Services</h3>
+                <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full mb-12"></div>
+              </div>
+
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/11/shadi-1080x628.jpg" 
+                    alt="Marriage Solution" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">روحانی شادی سروسز</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    ایسے افراد جو رشتہ نہ ہو نے سے یا بار باربغیر کسی وجہ کے انکار ہو جانے کی وجہ سے پریشان ہیں۔ان کے لئے ہمارے روحانی ماہرین نے سورۃ المزمل کا خاص نقش تیار کیا ہے۔ اس نقش پر کثیر تعداد میں اسمِ اعظم اور منتخب قرآنی آیات کی تلاوت کی گئی ہے اور پھر خاص دعا کے ساتھ اسے شادی...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           
           {/* Statistics Section */}
-          <section className="bg-white py-12 border-b border-gray-100">
+          <section className="bg-emerald-50/50 py-12 border-y border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div>
@@ -48,7 +84,7 @@ const App: React.FC = () => {
 
           <Services />
 
-          {/* New Categories Exploration Section */}
+          {/* Categories Exploration Section */}
           <section className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
