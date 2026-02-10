@@ -10,10 +10,10 @@ import TopicPage from './components/TopicPage';
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
 
-  const topics = [
+  const categories = [
     "Amazing", "Bawaseer", "Dolat", "health Taweez", "Marriage", 
     "Muhabbat", "Nasha", "Period", "Rohani Ilaj", "shifa", 
-    "taweez", "Uncategorized", "Wazifa", "Sample Page"
+    "taweez", "Uncategorized", "Wazifa"
   ];
 
   const statsItems = [
@@ -22,6 +22,11 @@ const App: React.FC = () => {
     { value: "100%", label: "Privacy Assured" },
     { value: "24/7", label: "Global Support" }
   ];
+
+  const handlePageChange = (page: string) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const renderContent = () => {
     if (currentPage === 'home') {
@@ -49,8 +54,8 @@ const App: React.FC = () => {
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold text-center tracking-wide px-6">
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
                     Surah Muzammil Ka Naqsh For Marriage
                   </h3>
                 </div>
@@ -227,7 +232,7 @@ const App: React.FC = () => {
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
                   <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">بچہ دانی کی رسولی کا قرآنی علاج</h4>
                   <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
-                    اگر آپ کی بچے دانی میں ایک یا ایک سے زائد رسولیاں ہیں۔جس کی وجہ سے آپ مختلف مسائل کا شکار ہیں جن میں سب سے بڑامسئلہ بے اولادی کا ہے۔مختلف علاج کروائے اور ہر طرح کی میڈیسن کھا کر دیکھ چکی ہیں لیکن کسی भी میڈیسن کا کوئی فائدہ نہیں ہوا تو آپ کو ضرورت ہے پر فیکٹ روحانی...
+                    اگر آپ کی بچے دانی میں ایک یا ایک سے زائد رسولیاں ہیں۔جس کی وجہ سے آپ مختلف مسائل کا شکار ہیں جن میں سب سے بڑامسئلہ بے اولادی کا ہے۔مختلف علاج کروائے اور ہر طرح کی میڈیسن کھا کر دیکھ چکی ہیں لیکن کسی بھی میڈیسن کا کوئی فائدہ نہیں ہوا تو آپ کو ضرورت ہے پر فیکٹ روحانی...
                   </p>
                   <div className="flex justify-start">
                     <a 
@@ -396,7 +401,6 @@ const App: React.FC = () => {
               <div className="relative">
                 {/* Marquee Wrapper */}
                 <div className="marquee-container flex items-center">
-                  {/* First Set of Stats */}
                   <div className="flex items-center">
                     {statsItems.map((stat, idx) => (
                       <div key={`set1-${idx}`} className="w-[300px] flex-shrink-0 text-center px-10">
@@ -405,7 +409,6 @@ const App: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  {/* Duplicate Set for Seamless Loop */}
                   <div className="flex items-center">
                     {statsItems.map((stat, idx) => (
                       <div key={`set2-${idx}`} className="w-[300px] flex-shrink-0 text-center px-10">
@@ -421,31 +424,44 @@ const App: React.FC = () => {
 
           <Services />
 
-          {/* Categories Exploration Section */}
-          <section className="py-24 bg-gray-50">
+          {/* Categories Exploration Section - Internal Navigation & Enhanced Glow */}
+          <section className="py-24 bg-slate-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-3">Spiritual Library</h2>
-                <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Explore Our Specialized Pages</h3>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                  Browse through our comprehensive guides and articles for various spiritual and life challenges.
+                <h3 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Explore Our Specialized Pages</h3>
+                <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                  Browse through our comprehensive guides for various spiritual challenges. All information is loaded within our platform for your convenience.
                 </p>
+                <div className="w-24 h-1.5 bg-emerald-500 mx-auto rounded-full mt-6 shadow-[0_0_15px_rgba(16,185,129,0.4)]"></div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                {topics.map(topic => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 group/grid">
+                {categories.map(cat => (
                   <button
-                    key={topic}
-                    onClick={() => {
-                      setCurrentPage(topic);
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="p-6 bg-white border border-gray-100 rounded-2xl hover:border-emerald-500 hover:shadow-lg transition-all text-center group"
+                    key={cat}
+                    onClick={() => handlePageChange(cat)}
+                    className="group relative p-10 bg-white border border-emerald-50 rounded-[3rem] transition-all duration-700 text-center overflow-hidden
+                    shadow-[0_0_40px_-15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_60px_0px_rgba(16,185,129,0.6)] 
+                    hover:-translate-y-4 hover:scale-105 hover:z-10
+                    group-hover/grid:opacity-30 group-hover/grid:blur-[2px] hover:!opacity-100 hover:!blur-none"
                   >
-                    <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                      <i className="fa-solid fa-book-open text-xl"></i>
+                    {/* Background Soft Glow Tint */}
+                    <div className="absolute inset-0 bg-emerald-50/0 group-hover:bg-emerald-50/70 transition-colors duration-500"></div>
+                    
+                    <div className="relative z-10 flex flex-col items-center">
+                      <div className="w-24 h-24 bg-emerald-50 text-emerald-600 rounded-[2.5rem] flex items-center justify-center mb-6 
+                        group-hover:bg-emerald-600 group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-700 
+                        shadow-[0_10px_30px_-10px_rgba(16,185,129,0.3)] group-hover:shadow-emerald-500/80">
+                        <i className="fa-solid fa-book-open text-4xl"></i>
+                      </div>
+                      <span className="font-black text-gray-800 text-xl md:text-2xl group-hover:text-emerald-900 transition-colors tracking-tight">
+                        {cat}
+                      </span>
+                      <div className="mt-6 flex items-center gap-2 text-emerald-700 font-bold text-xs uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                        Read Insights <i className="fa-solid fa-chevron-right"></i>
+                      </div>
                     </div>
-                    <span className="font-bold text-gray-800 text-sm md:text-base group-hover:text-emerald-700">{topic}</span>
                   </button>
                 ))}
               </div>
@@ -562,7 +578,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar onPageChange={setCurrentPage} currentPage={currentPage} />
+      <Navbar onPageChange={handlePageChange} currentPage={currentPage} />
       
       <main>
         {renderContent()}
