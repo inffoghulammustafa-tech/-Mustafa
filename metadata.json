@@ -1,0 +1,8 @@
+{
+  "name": "Rohani Ilaj - Spiritual Healing Center",
+  "description": "A modern, high-performance spiritual healing platform inspired by RohaniIlajSite, featuring AI-powered spiritual guidance, service management, and seamless contact options.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
