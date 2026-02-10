@@ -22,15 +22,16 @@ const App: React.FC = () => {
         <>
           <Hero />
 
-          {/* Featured Service Section - Text below image layout */}
+          {/* Featured Services Container */}
           <section className="py-24 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
               <div className="text-center mb-16">
                 <h2 className="text-emerald-600 font-black uppercase tracking-[0.2em] text-sm mb-4">Our Specialization</h2>
                 <h3 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Services</h3>
                 <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full mb-12"></div>
               </div>
 
+              {/* Service 1: Marriage */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <img 
@@ -38,6 +39,11 @@ const App: React.FC = () => {
                     alt="Marriage Solution" 
                     className="w-full h-auto object-cover max-h-[600px]"
                   />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold text-center tracking-wide">
+                    Surah Muzammil Ka Naqsh For Marriage
+                  </h3>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
                   <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">روحانی شادی سروسز</h4>
@@ -54,6 +60,323 @@ const App: React.FC = () => {
                     </a>
                   </div>
                 </div>
+              </div>
+
+              {/* Service 2: UTI Treatment */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/11/uti-1080x628.jpg" 
+                    alt="UTI Solution" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Peshab Mein Jalan Ka Ilaj
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Nov 11, 2025 | Rohani Ilaj
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">پیشاب کی نالی کا انفیکشن (UTI)</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    پیشاب کی نالی کا انفیکشن یو ٹی آئی ایک عام مگر نہایت تکلیف دہ مسئلہ ہے، خاص طور پر خواتین میں۔ اس بیماری کی وجہ سے پیشاب میں جلن، درد، بار بار پیشاب آنے کی تکلیف، کمزوری اور بخار جیسے مسائل جنم لیتے ہیں ایسی ہی ایک خاتون برسوں سے شدید جلن اور یو ٹی آئی کے بار بار ہونے...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 3: Uterine Inflammation */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/11/bacha-dani-1080x628.jpg" 
+                    alt="Uterine Inflammation Solution" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Uterine Inflammation And Infection
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Nov 11, 2025 | Rohani Ilaj
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">بچہ دانی میں سوزش اور انفیکشن</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    بچہ دانی میں شدید سوزش خواتین کے لیے ایک جان لیوا تکلیف ہے جو روزمرہ کے کام مشکل بنا دیتی ہے اور نیند و آرام میں خلل ڈالتی ہے۔ اس بیماری میں پیٹ اور کمر کے درد کے ساتھ پیشاب اور حیض کے مسائل بھی پیدا ہو سکتے ہیں، ایسی ہی ایک خاتون اس بیماری میں مبتلا تھی۔اس نے ہمارے...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 4: Uterus Fibroids */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/11/RSOLI-1080x628.jpg" 
+                    alt="Uterus Fibroids Solution" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Uterus Ki Rasoli Se Shifa Ka Naqsh
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Nov 10, 2025 | Rohani Ilaj
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">رحم کی رسولیاں اور ان کا روحانی علاج</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    رحم کی رسولیاں فائبرائڈز ایک ایسی تکلیف ہیں جو عورت کی زندگی کو جسمانی اور ذہنی طور پر کمزور کر دیتی ہے۔ درد، کمزوری یہ سب علامات زندگی کو مشکل بنا دیتی ہے۔ ایک خاتون کو بھی یہی مسئلہ برسوں سے لاحق تھا، مختلف علاج کروائے، مگر آرام صرف وقتی رہا۔انہوں نے نیت خالص کے...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 5: Ovarian/Uterine Cyst */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/08/cyst-1080x628.jpg" 
+                    alt="Bachedani Ki Rasoli Solution" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Bachedani Ki Rasoli Se Shifa Ka Naqsh
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Aug 8, 2025 | Nasha
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">بچہ دانی کی رسولی اور بانجھ پن</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    ایسی خوا تین جن کے بچہ دانی میں رسولیا ں ہیں۔او ر اسی مرض کی وجہ سے وہ ابھی تک او لاد جیسی نعمت سے محروم ہیں۔ بہت سے علاج کر وا کر دیکھ لئے۔ ڈاکٹر زکی میڈیسن،حکیمی دوائیاں او ر یہا ں تک کے سر جر ی کر وا کر بھی دیکھ لی لیکن شفاء حاصل نہیں ہو ئی۔ او ر ما یو سی کو اپنا...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 6: Uterine Fibroids Quranic Treatment */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/08/rasoli-1080x628.jpg" 
+                    alt="Uterine Fibroids Quranic Solution" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Uterine Fibroids Treatment In Quran
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Aug 5, 2025 | Nasha
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">بچہ دانی کی رسولی کا قرآنی علاج</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    اگر آپ کی بچے دانی میں ایک یا ایک سے زائد رسولیاں ہیں۔جس کی وجہ سے آپ مختلف مسائل کا شکار ہیں جن میں سب سے بڑامسئلہ بے اولادی کا ہے۔مختلف علاج کروائے اور ہر طرح کی میڈیسن کھا کر دیکھ چکی ہیں لیکن کسی bhi میڈیسن کا کوئی فائدہ نہیں ہوا تو آپ کو ضرورت ہے پر فیکٹ روحانی...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 7: Kidney Stone Relief */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/07/pathri-1080x628.jpg" 
+                    alt="Kidney Stone Relief" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Gurde Ki Pathri Se Shifa Ka Rohani Ilaj
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Jul 30, 2025 | Rohani Ilaj
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">گردے کی پتھری کا روحانی علاج</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    اگر آپ کو گردے میں پتھری کی شکایت ہے۔بہت عرصے سے اس تکلیف میں مبتلا ہیں اور مہنگی مہنگی میڈیسن بھی استعمال کیں لیکن کسی بھی دوا نے اثر نہیں کیا تو آپ کو چاہئے کہ سورۂ الفاتحہ کا روحانی نقش اپنے نام سے منسوب کروا کے اپنے پاس رکھیں۔ چونکہ اس نقش کو شفاء کے روحانی کلمات...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 8: Kanwal Name Meaning */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/07/kanwal-1080x628.jpg" 
+                    alt="Kanwal Name Meaning" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Kanwal Name Meaning In Urdu
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Jul 23, 2025 | Amazing
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">کنول نام کا مطلب اور روحانی حل</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    آج کا موضوع کنول نام کی لڑکیوں کے لئے بنائی گئی ہے جس میں ہم بتائیں گے کنول نام کا مطلب اسم اعظم اور ہر مسئلے کا بہترین روحانی حل۔ کنول ایک پھول کا نام ہے۔کنول آپ کا اسم اعظم ہے یا بدیع، یا ودود اس اسم اعظم کوہر روز 106 مرتبہ پڑھنا اپنا معمول بنا لیں۔اللہ کے کرم سے...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 9: Haris Name Meaning */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/07/haris-1080x628.gif" 
+                    alt="Haris Name Meaning" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Haris Name Meaning In Urdu
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Jul 22, 2025 | Amazing
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">حارث نام کا اسم اعظم اور کامیابی</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    آج کے موضوع میں ہم آپ کو بتائیں گے حارث نام کا اسم اعظم اور ہر مسئلے کا زبردست روحانی حل۔حارث آپ کا اسم اعظم ہے یا مومن،یا باعث اس اسم اعظم کو ہر روز 709 مرتبہ پڑھنا اپنا معمول بنا لیں۔ اللہ کے کرم سے ہر مشکل آسان ہوجائے گی اور کامیابی ہر قدم پر آپ کا مقدر بنے گی...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 10: Naqsh For Love Marriage */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img 
+                    src="https://www.rohaniilajsite.com/wp-content/uploads/2025/07/nnd-1080x628.gif" 
+                    alt="Naqsh For Love Marriage" 
+                    className="w-full h-auto object-cover max-h-[600px]"
+                  />
+                </div>
+                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide">
+                    Naqsh For Love Marriage
+                  </h3>
+                  <p className="text-emerald-700/60 text-sm mt-2 font-medium">
+                    by admin | Jul 21, 2025 | Muhabbat
+                  </p>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">محبت کی شادی اور دوریوں کا خاتمہ</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">
+                    محبت اک ایسی روحا نی طا قت ہے۔جو انسا ن کو اللہ سے بھی ملا تی ہے او ر انسا ن سے بھی۔لیکن جب کو ئی اپنا چھوڑ جا ئے، جب محبت دو ریوں کا را ستہ اختیا ر کر لے او ر آپ سے منہ مو ڑ لے۔تو دل مزید بے چینی کا شکا ر ہو جا تا ہے۔اس بے چینی کو را حت میں بدلنے کے لئے ہمارے رو حا...
+                  </p>
+                  <div className="flex justify-start">
+                    <a 
+                      href="https://wa.me/923000000000" 
+                      className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl"
+                    >
+                      <i className="fa-brands fa-whatsapp text-3xl"></i>
+                      ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Older Entries Pagination Link */}
+              <div className="max-w-5xl mx-auto flex justify-center pt-8">
+                <a 
+                  href="https://www.rohaniilajsite.com/page/2/" 
+                  className="px-8 py-4 bg-emerald-50 border border-emerald-100 rounded-full text-emerald-700 font-bold hover:bg-emerald-100 transition-all flex items-center gap-3 shadow-sm hover:shadow-md active:scale-95"
+                >
+                  <i className="fa-solid fa-angles-left"></i>
+                  Older Entries
+                </a>
               </div>
             </div>
           </section>
