@@ -11,16 +11,26 @@ const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
 
   const categories = [
-    "Amazing", "Bawaseer", "Dolat", "health Taweez", "Marriage", 
-    "Muhabbat", "Nasha", "Period", "Rohani Ilaj", "shifa", 
-    "taweez", "Uncategorized", "Wazifa"
+    { id: "Amazing", label: "حیرت انگیز" },
+    { id: "Bawaseer", label: "بواسیر" },
+    { id: "Dolat", label: "دولت" },
+    { id: "health Taweez", label: "صحت کے تعویذ" },
+    { id: "Marriage", label: "شادی" },
+    { id: "Muhabbat", label: "محبت" },
+    { id: "Nasha", label: "نشہ" },
+    { id: "Period", label: "ماہواری" },
+    { id: "Rohani Ilaj", label: "روحانی علاج" },
+    { id: "shifa", label: "شفاء" },
+    { id: "taweez", label: "تعویذ" },
+    { id: "Uncategorized", label: "دیگر" },
+    { id: "Wazifa", label: "وظیفہ" }
   ];
 
   const statsItems = [
-    { value: "10k+", label: "Satisfied People" },
-    { value: "15+", label: "Years Experience" },
-    { value: "100%", label: "Privacy Assured" },
-    { value: "24/7", label: "Global Support" }
+    { value: "10k+", label: "مطمئن افراد" },
+    { value: "15+", label: "سال کا تجربہ" },
+    { value: "100%", label: "رازداری کی ضمانت" },
+    { value: "24/7", label: "عالمی سپورٹ" }
   ];
 
   const handlePageChange = (page: string) => {
@@ -79,12 +89,12 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 2: UTI Treatment (WITH IMAGE) */}
+              {/* Service 2: UTI Treatment (WITH NEW REQUESTED IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/11/11/peshab-jalan-ilaj/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://i.pinimg.com/736x/d5/74/68/d57468fb3a23a9ed1afe84a9d43630f9.jpg" 
+                      src="https://prayprogram.com/wp-content/uploads/2025/10/w9-400x250.jpg" 
                       alt="UTI Treatment Solution" 
                       referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
@@ -454,13 +464,13 @@ const App: React.FC = () => {
           <Services />
 
           {/* Categories Exploration Section - Internal Navigation & Enhanced Glow */}
-          <section className="py-24 bg-slate-50">
+          <section className="py-24 bg-slate-50" dir="rtl">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
-                <h2 className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-3">Spiritual Library</h2>
-                <h3 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Explore Our Specialized Pages</h3>
-                <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
-                  Browse through our comprehensive guides for various spiritual challenges. All information is loaded within our platform for your convenience.
+                <h2 className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-3 font-arabic">روحانی کتب خانہ</h2>
+                <h3 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 font-arabic">ہمارے خصوصی صفحات تلاش کریں</h3>
+                <p className="text-gray-600 max-w-2xl mx-auto text-xl md:text-2xl leading-relaxed font-arabic">
+                  مختلف روحانی چیلنجوں کے لیے ہمارے جامع گائیڈز دیکھیں۔ آپ کی سہولت کے لیے تمام معلومات اردو میں فراہم کی گئی ہیں۔
                 </p>
                 <div className="w-24 h-1.5 bg-emerald-500 mx-auto rounded-full mt-6 shadow-[0_0_15px_rgba(16,185,129,0.4)]"></div>
               </div>
@@ -468,8 +478,8 @@ const App: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 group/grid">
                 {categories.map(cat => (
                   <button
-                    key={cat}
-                    onClick={() => handlePageChange(cat)}
+                    key={cat.id}
+                    onClick={() => handlePageChange(cat.id)}
                     className="group relative p-10 bg-white border border-emerald-50 rounded-[3rem] transition-all duration-700 text-center overflow-hidden
                     shadow-[0_0_40px_-15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_60px_0px_rgba(16,185,129,0.6)] 
                     hover:-translate-y-4 hover:scale-105 hover:z-10
@@ -483,11 +493,11 @@ const App: React.FC = () => {
                         shadow-[0_10px_30px_-10px_rgba(16,185,129,0.3)] group-hover:shadow-emerald-500/80">
                         <i className="fa-solid fa-book-open text-4xl"></i>
                       </div>
-                      <span className="font-black text-gray-800 text-xl md:text-2xl group-hover:text-emerald-900 transition-colors tracking-tight">
-                        {cat}
+                      <span className="font-black text-gray-800 text-2xl md:text-3xl group-hover:text-emerald-900 transition-colors tracking-tight font-arabic">
+                        {cat.label}
                       </span>
-                      <div className="mt-6 flex items-center gap-2 text-emerald-700 font-bold text-xs uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                        Read Insights <i className="fa-solid fa-chevron-right"></i>
+                      <div className="mt-6 flex items-center gap-2 text-emerald-700 font-bold text-sm uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 font-arabic">
+                         تفصیل پڑھیں <i className="fa-solid fa-chevron-left"></i>
                       </div>
                     </div>
                   </button>
