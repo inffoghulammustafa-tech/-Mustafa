@@ -76,11 +76,6 @@ const App: React.FC = () => {
       id: "Wazifa", 
       label: "وظیفہ", 
       image: "https://i.ytimg.com/vi/lG66vN_uL_Y/hq720.jpg" 
-    },
-    { 
-      id: "Uncategorized", 
-      label: "دیگر", 
-      image: "https://picsum.photos/seed/spiritual/400/250" 
     }
   ];
 
@@ -102,12 +97,12 @@ const App: React.FC = () => {
         <>
           <Hero />
 
-          {/* Featured Services Container */}
+          {/* Featured Content Section */}
           <section className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
               <div className="text-center mb-16">
                 <h2 className="text-emerald-600 font-black uppercase tracking-[0.2em] text-sm mb-4">Our Specialization</h2>
-                <h3 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Services</h3>
+                <h3 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Featured Content</h3>
                 <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full mb-12"></div>
               </div>
 
@@ -150,7 +145,7 @@ const App: React.FC = () => {
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/11/11/peshab-jalan-ilaj/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://i.ytimg.com/vi/rY9X8Q6E8bI/maxresdefault.jpg" 
+                      src="https://i.pinimg.com/1200x/b7/d2/54/b7d25452da75a74613c1eae78dc51b27.jpg" 
                       alt="UTI Treatment Solution" 
                       referrerPolicy="no-referrer"
                       onError={handleImageError}
@@ -184,7 +179,7 @@ const App: React.FC = () => {
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/11/11/uterine-inflammation-infection/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://i.ytimg.com/vi/rY9X8Q6E8bI/maxresdefault.jpg" 
+                      src="https://i.pinimg.com/1200x/e8/a6/31/e8a631bc9a835cb8bf57501d0a7eab3d.jpg" 
                       alt="Uterine Inflammation Solution" 
                       referrerPolicy="no-referrer"
                       onError={handleImageError}
@@ -213,7 +208,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Services 4 to 10 follow the same robust image loading pattern */}
+              {/* Service 4: Uterus Ki Rasoli */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/11/10/uterus-rasoli-shifa-naqsh/" target="_blank" rel="noopener noreferrer">
@@ -231,7 +226,7 @@ const App: React.FC = () => {
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
                   <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">رحم کی رسولیاں اور ان کا روحانی علاج</h4>
-                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">رحم کی رسولیاں فائبرائڈز ایک ایسی تکلیف ہیں جو عورت کی زندگی کو جسمانی اور ذہنی طور پر کمزور کر دیتی ہے۔..</p>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">رحم کی رسولیاں فائبرائڈز ایک ایسی تکلیف ہیں جو عورت کی زندگی کو جسمانی اور ذہنی طور پر کمزور کر دیتی ہے۔ درد، کمزوری یہ سب علامات زندگی کو مشکل بنا دیتی ہے۔..</p>
                   <div className="flex justify-start">
                     <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl">
                       <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
@@ -240,15 +235,165 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 5: Ovarian Cyst */}
+              {/* Service 5: Bachedani Ki Rasoli */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/08/08/bachedani-rasoli-shifa-naqsh/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ytimg.com/vi/v5OQ_0A9_kM/maxresdefault.jpg" alt="Bachedani Rasoli" referrerPolicy="no-referrer" onError={handleImageError} className="w-full h-auto object-cover max-h-[600px]" />
+                    <img 
+                      src="https://i.ytimg.com/vi/v5OQ_0A9_kM/maxresdefault.jpg" 
+                      alt="Bachedani Rasoli" 
+                      referrerPolicy="no-referrer" 
+                      onError={handleImageError} 
+                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity" 
+                    />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-12 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold">Bachedani Ki Rasoli Se Shifa Ka Naqsh</h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Bachedani Ki Rasoli Se Shifa Ka Naqsh</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">بچہ دانی کی رسولی اور بانجھ پن</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">ایسی خوا تین جن کے بچہ دانی میں رسولیا ں ہیں۔او ر اسی مرض کی وجہ سے وہ ابھی تک او لاد جیسی نعمت سے محروم ہیں۔..</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 6: Uterine Fibroids Quranic */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <a href="https://www.rohaniilajsite.com/2025/08/05/uterine-fibroids-treatment/" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="https://i.ytimg.com/vi/lG66vN_uL_Y/hq720.jpg" 
+                      alt="Uterine Fibroids" 
+                      referrerPolicy="no-referrer" 
+                      onError={handleImageError} 
+                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer" 
+                    />
+                  </a>
+                </div>
+                <div className="w-full bg-emerald-50 py-12 text-center border-b border-emerald-100/50">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold">Uterine Fibroids Treatment In Quran</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">بچہ دانی کی رسولیاں اور قرآنی علاج</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">بچہ دانی کی رسولیوں (Fibroids) کا بہترین حل قرآن پاک کی مبارک آیات میں موجود ہے۔ بہت سی خواتین اس مرض کی وجہ سے شدید تکلیف اور بے اولادی کا شکار رہتی ہیں، ان کے لیے خاص قرآنی نقش اور وظائف تیار کیے گئے ہیں۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 7: Kidney Stone */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <a href="https://www.rohaniilajsite.com/2025/07/30/gurde-pathri-shifa-rohani-ilaj/" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="https://i.ytimg.com/vi/lG66vN_uL_Y/hq720.jpg" 
+                      alt="Kidney Stone" 
+                      referrerPolicy="no-referrer" 
+                      onError={handleImageError} 
+                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer" 
+                    />
+                  </a>
+                </div>
+                <div className="w-full bg-emerald-50 py-12 text-center border-b border-emerald-100/50">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold">Gurde Ki Pathri Se Shifa Ka Rohani Ilaj</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">گردے کی پتھری کا روحانی علاج</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">گردے کی پتھری ایک تکلیف دہ مرض ہے۔ اللہ کے فضل و کرم سے مخصوص قرآنی کلمات اور دم کے ذریعے پتھری کے اخراج اور درد سے نجات کے لیے ہم بہترین روحانی رہنمائی فراہم کرتے ہیں۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 8: Kanwal Name */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <a href="https://www.rohaniilajsite.com/2025/07/23/kanwal-name-meaning/" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="https://i.ytimg.com/vi/XbUb_PDHOL0/maxresdefault.jpg" 
+                      alt="Kanwal Name" 
+                      referrerPolicy="no-referrer" 
+                      onError={handleImageError} 
+                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer" 
+                    />
+                  </a>
+                </div>
+                <div className="w-full bg-emerald-50 py-12 text-center border-b border-emerald-100/50">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold">Kanwal Name Meaning In Urdu</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">کنول نام کا مطلب اور اثرات</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">نام کے انسان کی شخصیت اور زندگی پر گہرے اثرات ہوتے ہیں۔ کنول نام کے معنی، اس کے عدد، موافق پتھر اور اس نام سے جڑے روحانی پہلوؤں کے بارے میں تفصیلی معلومات حاصل کریں۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 9: Haris Name */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <a href="https://www.rohaniilajsite.com/2025/07/22/haris-name-meaning/" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="https://i.pinimg.com/736x/73/3d/93/733d93f349fe6ca44b6362ee61feb41c.jpg" 
+                      alt="Haris Name" 
+                      referrerPolicy="no-referrer" 
+                      onError={handleImageError} 
+                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer" 
+                    />
+                  </a>
+                </div>
+                <div className="w-full bg-emerald-50 py-12 text-center border-b border-emerald-100/50">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold">Haris Name Meaning In Urdu</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">حارث نام کا مطلب اور برکات</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">حارث ایک بابرکت نام ہے جس کے معنی 'کاشتکار' یا 'محافظ' کے ہیں۔ اس نام کے حامل افراد کی زندگی، ان کے مزاج اور خوش قسمتی کے حوالے سے مکمل روحانی معلومات یہاں دستیاب ہیں۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 10: Love Marriage Naqsh */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <a href="https://www.rohaniilajsite.com/2025/07/21/naqsh-love-marriage/" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="https://i.ytimg.com/vi/hvaV2Md_3TA/hq720.jpg" 
+                      alt="Love Marriage Naqsh" 
+                      referrerPolicy="no-referrer" 
+                      onError={handleImageError} 
+                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer" 
+                    />
+                  </a>
+                </div>
+                <div className="w-full bg-emerald-50 py-12 text-center border-b border-emerald-100/50">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold">Naqsh For Love Marriage</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">پسند کی شادی کے لیے خاص نقش</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">اگر آپ پسند کی شادی میں رکاوٹوں کا سامنا کر رہے ہیں یا والدین کو منانا چاہتے ہیں، تو ہمارا خاص تیار کردہ روحانی نقش آپ کی مدد کر سکتا ہے۔ یہ نقش برکت اور محبت کے حصول کے لیے نہایت کارآمد ہے۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 active:scale-95 text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -305,29 +450,19 @@ const App: React.FC = () => {
                   <button
                     key={cat.id}
                     onClick={() => handlePageChange(cat.id)}
-                    className="group relative bg-white border border-emerald-50 rounded-[3rem] transition-all duration-700 text-center overflow-hidden
-                    shadow-[0_0_40px_-15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_60px_0px_rgba(16,185,129,0.6)] 
+                    className="group relative bg-white border border-emerald-50 rounded-[2.5rem] transition-all duration-700 text-center overflow-hidden p-10
+                    shadow-[0_0_40px_-15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_60px_0px_rgba(16,185,129,0.4)] 
                     hover:-translate-y-4 hover:scale-105 hover:z-10
                     group-hover/grid:opacity-30 group-hover/grid:blur-[2px] hover:!opacity-100 hover:!blur-none"
                   >
                     <div className="absolute inset-0 bg-emerald-50/0 group-hover:bg-emerald-50/70 transition-colors duration-500"></div>
                     <div className="relative z-10 flex flex-col items-center">
-                      <div className="w-full h-48 overflow-hidden">
-                        <img 
-                          src={cat.image} 
-                          alt={cat.label} 
-                          referrerPolicy="no-referrer"
-                          onError={handleImageError}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                      </div>
-                      <div className="p-8">
-                        <span className="font-black text-gray-800 text-2xl md:text-3xl group-hover:text-emerald-900 transition-colors tracking-tight font-arabic">
-                          {cat.label}
-                        </span>
-                        <div className="mt-6 flex items-center justify-center gap-2 text-emerald-700 font-bold text-sm uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 font-arabic">
-                           تفصیل پڑھیں <i className="fa-solid fa-chevron-left"></i>
-                        </div>
+                      <span className="font-black text-gray-800 text-2xl md:text-3xl group-hover:text-emerald-900 transition-colors tracking-tight font-arabic">
+                        {cat.label}
+                      </span>
+                      <div className="w-12 h-1 bg-emerald-200 mt-4 rounded-full group-hover:w-20 group-hover:bg-emerald-500 transition-all duration-500"></div>
+                      <div className="mt-8 flex items-center justify-center gap-2 text-emerald-700 font-bold text-sm uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 font-arabic">
+                         تفصیل پڑھیں <i className="fa-solid fa-chevron-left"></i>
                       </div>
                     </div>
                   </button>
