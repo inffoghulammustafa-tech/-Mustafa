@@ -43,21 +43,24 @@ const App: React.FC = () => {
                 <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full mb-12"></div>
               </div>
 
-              {/* Service 1: Marriage */}
+              {/* Service 1: Marriage (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/11/21/surah-muzammil-naqsh-marriage/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/11/shadi-1080x628.jpg" 
+                      src="https://i.pinimg.com/736x/79/19/8d/79198d358646ac581d7cf100ede77298.jpg" 
                       alt="Marriage Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Surah Muzammil Ka Naqsh For Marriage
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/11/21/surah-muzammil-naqsh-marriage/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Surah Muzammil Ka Naqsh For Marriage
+                    </h3>
+                  </a>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
                   <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">روحانی شادی سروسز</h4>
@@ -76,21 +79,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 2: UTI Treatment */}
+              {/* Service 2: UTI Treatment (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/11/11/peshab-jalan-ilaj/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/11/uti-1080x628.jpg" 
-                      alt="UTI Solution" 
+                      src="https://i.pinimg.com/736x/d5/74/68/d57468fb3a23a9ed1afe84a9d43630f9.jpg" 
+                      alt="UTI Treatment Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Peshab Mein Jalan Ka Ilaj
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/11/11/peshab-jalan-ilaj/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Peshab Mein Jalan Ka Ilaj
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Nov 11, 2025 | Rohani Ilaj</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -110,21 +116,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 3: Uterine Inflammation */}
+              {/* Service 3: Uterine Inflammation (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/11/11/uterine-inflammation-infection/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/11/bacha-dani-1080x628.jpg" 
+                      src="https://i.pinimg.com/1200x/e8/a6/31/e8a631bc9a835cb8bf57501d0a7eab3d.jpg" 
                       alt="Uterine Inflammation Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Uterine Inflammation And Infection
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/11/11/uterine-inflammation-infection/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Uterine Inflammation And Infection
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Nov 11, 2025 | Rohani Ilaj</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -144,21 +153,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 4: Uterus Fibroids */}
+              {/* Service 4: Uterus Fibroids (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/11/10/uterus-rasoli-shifa-naqsh/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/11/RSOLI-1080x628.jpg" 
+                      src="https://i.pinimg.com/736x/13/16/50/13165004dae601800cefd741a2cf5425.jpg" 
                       alt="Uterus Fibroids Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Uterus Ki Rasoli Se Shifa Ka Naqsh
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/11/10/uterus-rasoli-shifa-naqsh/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Uterus Ki Rasoli Se Shifa Ka Naqsh
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Nov 10, 2025 | Rohani Ilaj</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -178,21 +190,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 5: Ovarian/Uterine Cyst */}
+              {/* Service 5: Ovarian/Uterine Cyst (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/08/08/bachedani-rasoli-shifa-naqsh/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/08/cyst-1080x628.jpg" 
-                      alt="Bachedani Ki Rasoli Solution" 
+                      src="https://thepowerofdua.com/wp-content/uploads/2025/10/babiies-400x250.jpg" 
+                      alt="Bachedani Rasoli Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Bachedani Ki Rasoli Se Shifa Ka Naqsh
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/08/08/bachedani-rasoli-shifa-naqsh/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Bachedani Ki Rasoli Se Shifa Ka Naqsh
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Aug 8, 2025 | Nasha</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -212,21 +227,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 6: Uterine Fibroids Quranic Treatment */}
+              {/* Service 6: Uterine Fibroids Quranic Treatment (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/08/05/uterine-fibroids-treatment/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/08/rasoli-1080x628.jpg" 
-                      alt="Uterine Fibroids Quranic Solution" 
+                      src="https://pray.net.pk/wp-content/uploads/2025/08/bacha-dani-1080x628.jpg" 
+                      alt="Uterine Fibroids Quranic Treatment" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Uterine Fibroids Treatment In Quran
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/08/05/uterine-fibroids-treatment/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Uterine Fibroids Treatment In Quran
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Aug 5, 2025 | Nasha</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -246,21 +264,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 7: Kidney Stone Relief */}
+              {/* Service 7: Kidney Stone Relief (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/07/30/gurde-pathri-shifa-rohani-ilaj/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/07/pathri-1080x628.jpg" 
-                      alt="Kidney Stone Relief" 
+                      src="https://i.ytimg.com/vi/3ILU4Clq8mY/maxresdefault.jpg" 
+                      alt="Kidney Stone Relief Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Gurde Ki Pathri Se Shifa Ka Rohani Ilaj
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/07/30/gurde-pathri-shifa-rohani-ilaj/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Gurde Ki Pathri Se Shifa Ka Rohani Ilaj
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Jul 30, 2025 | Rohani Ilaj</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -280,21 +301,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 8: Kanwal Name Meaning */}
+              {/* Service 8: Kanwal Name Meaning (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/07/23/kanwal-name-meaning/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/07/kanwal-1080x628.jpg" 
-                      alt="Kanwal Name Meaning" 
+                      src="https://i.ytimg.com/vi/XbUb_PDHOL0/maxresdefault.jpg" 
+                      alt="Kanwal Name Meaning Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Kanwal Name Meaning In Urdu
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/07/23/kanwal-name-meaning/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Kanwal Name Meaning In Urdu
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Jul 23, 2025 | Amazing</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -314,21 +338,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 9: Haris Name Meaning */}
+              {/* Service 9: Haris Name Meaning (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/07/22/haris-name-meaning/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/07/haris-1080x628.gif" 
-                      alt="Haris Name Meaning" 
+                      src="https://i.pinimg.com/736x/73/3d/93/733d93f349fe6ca44b6362ee61feb41c.jpg" 
+                      alt="Haris Name Meaning Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Haris Name Meaning In Urdu
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/07/22/haris-name-meaning/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Haris Name Meaning In Urdu
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Jul 22, 2025 | Amazing</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -348,21 +375,24 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Service 10: Naqsh For Love Marriage */}
+              {/* Service 10: Naqsh For Love Marriage (WITH IMAGE) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/07/21/naqsh-love-marriage/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://www.rohaniilajsite.com/wp-content/uploads/2025/07/nnd-1080x628.gif" 
-                      alt="Naqsh For Love Marriage" 
+                      src="https://i.ytimg.com/vi/hvaV2Md_3TA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCNld17QaXu1V98kTDof0zs8F5ylg" 
+                      alt="Naqsh For Love Marriage Solution" 
+                      referrerPolicy="no-referrer"
                       className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity"
                     />
                   </a>
                 </div>
-                <div className="w-full bg-emerald-50 py-8 border-b border-emerald-100/50 text-center">
-                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">
-                    Naqsh For Love Marriage
-                  </h3>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <a href="https://www.rohaniilajsite.com/2025/07/21/naqsh-love-marriage/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6 hover:text-emerald-600 transition-colors">
+                      Naqsh For Love Marriage
+                    </h3>
+                  </a>
                   <p className="text-emerald-700/60 text-sm mt-2 font-medium">by admin | Jul 21, 2025 | Muhabbat</p>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
@@ -399,7 +429,6 @@ const App: React.FC = () => {
           <section className="bg-emerald-50/50 py-16 border-y border-gray-100 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="relative">
-                {/* Marquee Wrapper */}
                 <div className="marquee-container flex items-center">
                   <div className="flex items-center">
                     {statsItems.map((stat, idx) => (
@@ -446,7 +475,6 @@ const App: React.FC = () => {
                     hover:-translate-y-4 hover:scale-105 hover:z-10
                     group-hover/grid:opacity-30 group-hover/grid:blur-[2px] hover:!opacity-100 hover:!blur-none"
                   >
-                    {/* Background Soft Glow Tint */}
                     <div className="absolute inset-0 bg-emerald-50/0 group-hover:bg-emerald-50/70 transition-colors duration-500"></div>
                     
                     <div className="relative z-10 flex flex-col items-center">
@@ -464,25 +492,6 @@ const App: React.FC = () => {
                     </div>
                   </button>
                 ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Call to Action Section */}
-          <section className="py-20 bg-emerald-800 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-            </div>
-            <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Need Immediate Spiritual Consultation?</h2>
-              <p className="text-emerald-100 mb-10 text-lg">
-                Our experts are online to help you with Istikhara and Rohani solutions. No matter how difficult your situation is, there is always hope through prayer.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a href="https://wa.me/923000000000" className="px-10 py-4 bg-white text-emerald-800 font-bold rounded-2xl hover:bg-emerald-50 transition-all shadow-xl flex items-center gap-3 active:scale-95">
-                  <i className="fa-brands fa-whatsapp text-2xl text-emerald-600"></i>
-                  Start Free Consultation
-                </a>
               </div>
             </div>
           </section>
