@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -240,7 +239,7 @@ const App: React.FC = () => {
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/08/08/bachedani-rasoli-shifa-naqsh/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://i.ytimg.com/vi/v5OQ_0A9_kM/maxresdefault.jpg" 
+                      src="https://www.onlinetaweez.com/wp-content/uploads/2024/07/Bacha-Dani.jpg" 
                       alt="Bachedani Rasoli" 
                       referrerPolicy="no-referrer" 
                       onError={handleImageError} 
@@ -267,11 +266,11 @@ const App: React.FC = () => {
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/08/05/uterine-fibroids-treatment/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://i.ytimg.com/vi/lG66vN_uL_Y/hq720.jpg" 
+                      src="https://pray.net.pk/wp-content/uploads/2025/08/bacha-dani-1080x628.jpg" 
                       alt="Uterine Fibroids" 
                       referrerPolicy="no-referrer" 
                       onError={handleImageError} 
-                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer" 
+                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity" 
                     />
                   </a>
                 </div>
