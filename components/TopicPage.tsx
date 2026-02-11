@@ -4,12 +4,13 @@ import { getSpiritualGuidance, generateImageForTopic } from '../services/geminiS
 
 interface TopicPageProps {
   topic: string;
+  initialImage?: string;
   onBack: () => void;
 }
 
-const TopicPage: React.FC<TopicPageProps> = ({ topic, onBack }) => {
+const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) => {
   const [content, setContent] = useState<string>('');
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [imageUrl, setImageUrl] = useState<string | null>(initialImage || null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,18 +23,21 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, onBack }) => {
       اور قرآنی رہنمائی، دعاؤں اور روحانی مشقوں کے ذریعے اسے کیسے حل کیا جا سکتا ہے۔ 
       مواد کو ہیڈنگز اور بلٹ پوائنٹس کے ساتھ ترتیب دیں۔ لہجہ انتہائی احترام والا اور پر امید ہونا چاہیے۔`;
       
+      // We only generate a new image if one wasn't provided initially
       const [textResult, imageResult] = await Promise.all([
         getSpiritualGuidance(prompt),
-        generateImageForTopic(topic)
+        !initialImage ? generateImageForTopic(topic) : Promise.resolve(null)
       ]);
 
       setContent(textResult);
-      setImageUrl(imageResult);
+      if (!initialImage && imageResult) {
+        setImageUrl(imageResult);
+      }
       setLoading(false);
     };
 
     fetchContent();
-  }, [topic]);
+  }, [topic, initialImage]);
 
   return (
     <div className="pt-32 pb-20 bg-gray-50 min-h-screen" dir="rtl">
@@ -60,13 +64,15 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, onBack }) => {
             <div className="w-24 h-2 bg-emerald-400 mx-auto rounded-full relative z-10 shadow-[0_0_20px_rgba(52,211,153,0.5)]"></div>
           </div>
 
-          {/* Dynamic Image Section */}
-          {!loading && imageUrl && (
-            <div className="w-full h-[400px] overflow-hidden">
+          {/* Featured Image Section */}
+          {imageUrl && (
+            <div className="w-full h-auto max-h-[500px] overflow-hidden">
               <img 
                 src={imageUrl} 
                 alt={topic} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-opacity duration-700"
+                onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+                style={{ opacity: 0 }}
               />
             </div>
           )}

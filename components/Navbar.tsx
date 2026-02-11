@@ -32,8 +32,12 @@ const Navbar: React.FC<NavbarProps> = ({ onPageChange, currentPage }) => {
             className="flex items-center gap-3 cursor-pointer group" 
             onClick={() => handleLinkClick('home')}
           >
-            <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center text-white text-2xl group-hover:bg-emerald-600 transition-colors">
-              <i className="fa-solid fa-moon"></i>
+            <div className="w-16 h-12 flex items-center justify-center overflow-hidden">
+              <img 
+                src="https://rohanilaj.com/wp-content/uploads/2025/01/Rohani-Ilaj-Logo-Design.png" 
+                alt="Logo" 
+                className="h-full object-contain"
+              />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-emerald-900 tracking-tight leading-none">ROHANI ILAJ</h1>
