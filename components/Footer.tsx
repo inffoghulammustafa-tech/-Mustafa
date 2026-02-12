@@ -14,74 +14,131 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xl">
+    <footer className="relative bg-[#022c22] text-emerald-100/80 py-24 overflow-hidden">
+      {/* Decorative Watermark */}
+      <div className="absolute -bottom-20 -right-20 text-[25rem] text-white/5 pointer-events-none select-none -rotate-12">
+        <i className="fa-solid fa-star-and-crescent"></i>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          
+          {/* Brand Section */}
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="flex items-center gap-4 cursor-pointer group" onClick={() => handleNav('home')}>
+              <div className="w-14 h-14 bg-emerald-700 rounded-2xl flex items-center justify-center text-yellow-400 text-2xl shadow-xl group-hover:rotate-12 transition-transform duration-500">
                 <i className="fa-solid fa-moon"></i>
               </div>
-              <h2 className="text-xl font-bold text-white tracking-tight">ROHANI ILAJ</h2>
+              <div>
+                <h2 className="text-3xl font-premium font-bold text-white tracking-wide">ROHANI ILAJ</h2>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-yellow-500 font-bold">Spiritual Excellence</p>
+              </div>
             </div>
-            <p className="text-xl leading-relaxed mb-6 font-arabic text-right" dir="rtl">
+            
+            <p className="text-xl leading-[2] font-arabic text-right text-emerald-100/90 bg-white/5 p-6 rounded-3xl border border-white/10" dir="rtl">
               ہمارا مرکز قرآنی تعلیمات کی روشنی میں روحانی علاج فراہم کرتا ہے تاکہ آپ کی زندگی میں سکون، صحت اور کامیابی آ سکے۔ ہم دنیا بھر میں ہزاروں مومنین کی خدمت کر چکے ہیں۔
             </p>
+            
             <div className="flex gap-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-emerald-600 transition-colors"><i className="fa-brands fa-facebook-f text-sm"></i></a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-emerald-600 transition-colors"><i className="fa-brands fa-twitter text-sm"></i></a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-emerald-600 transition-colors"><i className="fa-brands fa-youtube text-sm"></i></a>
+              {['facebook-f', 'twitter', 'youtube', 'instagram'].map((icon) => (
+                <a 
+                  key={icon}
+                  href="#" 
+                  className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-yellow-500 hover:text-emerald-950 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(250,204,21,0.3)] transition-all duration-300"
+                >
+                  <i className={`fa-brands fa-${icon} text-lg`}></i>
+                </a>
+              ))}
             </div>
           </div>
 
-          <div>
-            <h3 className="text-white font-bold mb-6">Quick Links</h3>
-            <ul className="space-y-4 text-sm">
-              <li><button onClick={() => handleNav('home')} className="hover:text-emerald-500 transition-colors">Home</button></li>
-              <li><a href="#services" className="hover:text-emerald-500 transition-colors">Our Services</a></li>
-              <li><a href="#about" className="hover:text-emerald-500 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-emerald-500 transition-colors">Privacy Policy</a></li>
+          {/* Links Section 1 */}
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+            <h3 className="text-white font-premium text-2xl font-bold mb-10 pb-4 border-b border-white/10 flex items-center justify-between">
+              Navigation
+              <span className="w-8 h-[1px] bg-yellow-500"></span>
+            </h3>
+            <ul className="space-y-5 text-sm font-medium tracking-wide">
+              {['Home', 'Our Services', 'About Us', 'Privacy Policy'].map((item) => (
+                <li key={item}>
+                  <button 
+                    onClick={() => item === 'Home' ? handleNav('home') : null}
+                    className="footer-link hover:text-yellow-400 transition-colors uppercase text-[11px] tracking-widest"
+                  >
+                    {item}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-white font-bold mb-6">Services</h3>
-            <ul className="space-y-4 text-sm">
-              <li><button onClick={() => handleNav('Free Istikhara')} className="hover:text-emerald-500 transition-colors text-left">Free Istikhara</button></li>
-              <li><button onClick={() => handleNav('Love Marriage')} className="hover:text-emerald-500 transition-colors text-left">Love Marriage</button></li>
-              <li><button onClick={() => handleNav('Black Magic Help')} className="hover:text-emerald-500 transition-colors text-left">Black Magic Help</button></li>
-              <li><button onClick={() => handleNav('Family Problems')} className="hover:text-emerald-500 transition-colors text-left">Family Problems</button></li>
+          {/* Links Section 2 */}
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+            <h3 className="text-white font-premium text-2xl font-bold mb-10 pb-4 border-b border-white/10 flex items-center justify-between">
+              Spiritual Services
+              <span className="w-8 h-[1px] bg-yellow-500"></span>
+            </h3>
+            <ul className="space-y-5 text-sm font-medium tracking-wide">
+              {['Free Istikhara', 'Love Marriage', 'Black Magic Help', 'Family Problems'].map((service) => (
+                <li key={service}>
+                  <button 
+                    onClick={() => handleNav(service)} 
+                    className="footer-link hover:text-yellow-400 transition-colors uppercase text-[11px] tracking-widest text-left"
+                  >
+                    {service}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-white font-bold mb-6">Contact Us</h3>
-            <ul className="space-y-4 text-sm">
-              <li className="flex gap-3">
-                <i className="fa-solid fa-location-dot text-emerald-500 mt-1"></i>
+          {/* Contact Section */}
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <h3 className="text-white font-premium text-2xl font-bold mb-10 pb-4 border-b border-white/10 flex items-center justify-between">
+              Get In Touch
+              <span className="w-8 h-[1px] bg-yellow-500"></span>
+            </h3>
+            <ul className="space-y-8">
+              <li className="flex items-start gap-5 group">
+                <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-500 shrink-0 group-hover:bg-yellow-500 group-hover:text-emerald-950 transition-all animate-soft-pulse">
+                  <i className="fa-solid fa-location-dot"></i>
+                </div>
                 <a 
                   href="https://www.google.com/maps/place/Millat+road+millat+town+faisalabad/data=!4m7!3m6!1s0x392269267eef8369:0xc9fcd41ad587a292!8m2!3d31.4887194!4d73.104319!16s%2Fg%2F11tfzz0s3s!19sChIJaYPvfiZpIjkRkqKH1RrU_Mk?authuser=0&hl=en&rclk=1" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-emerald-500 transition-colors"
+                  className="text-sm font-medium leading-relaxed group-hover:text-white transition-colors"
                 >
-                  Millat road millat town faisalabad
+                  Millat Road, Millat Town<br />
+                  Faisalabad, Pakistan
                 </a>
               </li>
-              <li className="flex gap-3">
-                <i className="fa-solid fa-phone text-emerald-500"></i>
-                <span>+92 300 1234567</span>
+              <li className="flex items-center gap-5 group">
+                <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-500 shrink-0 group-hover:bg-yellow-500 group-hover:text-emerald-950 transition-all">
+                  <i className="fa-solid fa-phone"></i>
+                </div>
+                <span className="text-sm font-bold tracking-widest group-hover:text-white transition-colors">+92 300 1234567</span>
               </li>
-              <li className="flex gap-3">
-                <i className="fa-solid fa-envelope text-emerald-500"></i>
-                <span>info@rohaniilajsite.com</span>
+              <li className="flex items-center gap-5 group">
+                <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-500 shrink-0 group-hover:bg-yellow-500 group-hover:text-emerald-950 transition-all">
+                  <i className="fa-solid fa-envelope"></i>
+                </div>
+                <span className="text-sm font-medium tracking-tight group-hover:text-white transition-colors">info@rohaniilajsite.com</span>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="pt-8 border-t border-gray-800 text-center text-xs">
-          <p>© {new Date().getFullYear()} Rohani Ilaj Site. All rights reserved. Designed for spiritual well-being.</p>
+        {/* Copyright Area */}
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-emerald-100/40">
+            © {new Date().getFullYear()} ROHANI ILAJ CENTER • ALL RIGHTS RESERVED
+          </p>
+          <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-100/40">
+            <a href="#" className="hover:text-yellow-500 transition-colors">Cookies</a>
+            <a href="#" className="hover:text-yellow-500 transition-colors">Terms</a>
+            <a href="#" className="hover:text-yellow-500 transition-colors">Support</a>
+          </div>
         </div>
       </div>
     </footer>
