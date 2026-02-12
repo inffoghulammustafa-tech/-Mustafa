@@ -105,20 +105,22 @@ const Services: React.FC = () => {
                 shadow-xl shadow-gray-100 overflow-hidden
               `}
             >
-              {/* Icon Circle Badge */}
+              {/* Icon Circle Badge - Enhanced scale on hover */}
               <div className={`
                 absolute top-8 right-8 w-14 h-14 rounded-full 
-                flex items-center justify-center transition-transform duration-500 group-hover:scale-110
+                flex items-center justify-center transition-all duration-500 
+                group-hover:scale-[1.8] group-hover:rotate-12 group-hover:-translate-x-4 group-hover:translate-y-4
+                shadow-sm group-hover:shadow-xl
                 ${colorMap[service.color].iconBg} ${colorMap[service.color].iconText}
               `}>
-                <i className={`${service.icon} text-2xl`}></i>
+                <i className={`${service.icon} text-2xl transition-transform duration-500 group-hover:scale-110`}></i>
               </div>
 
               <div className="relative z-10 pt-4">
-                <h4 className="text-2xl font-bold text-[#0B1B32] mb-6 pr-12">
+                <h4 className="text-2xl font-bold text-[#0B1B32] mb-6 pr-12 transition-colors group-hover:text-emerald-900">
                   {service.title}
                 </h4>
-                <p className="text-gray-500 leading-relaxed mb-10 text-lg">
+                <p className="text-gray-500 leading-relaxed mb-10 text-lg group-hover:text-gray-600">
                   {service.description}
                 </p>
                 
@@ -137,7 +139,7 @@ const Services: React.FC = () => {
               {/* Decorative subtle background gradient */}
               <div className={`
                 absolute -bottom-20 -left-20 w-40 h-40 rounded-full blur-[60px] opacity-0
-                group-hover:opacity-20 transition-opacity duration-700
+                group-hover:opacity-30 transition-opacity duration-700
                 ${service.color === 'emerald' ? 'bg-emerald-400' : ''}
                 ${service.color === 'pink' ? 'bg-pink-400' : ''}
                 ${service.color === 'indigo' ? 'bg-indigo-400' : ''}

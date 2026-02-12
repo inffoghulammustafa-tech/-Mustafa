@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import ChatAssistant from './components/ChatAssistant';
-import Footer from './components/Footer';
-import TopicPage from './components/TopicPage';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import Services from './components/Services.tsx';
+import ChatAssistant from './components/ChatAssistant.tsx';
+import Footer from './components/Footer.tsx';
+import TopicPage from './components/TopicPage.tsx';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');

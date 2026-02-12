@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { getSpiritualGuidance, generateImageForTopic } from '../services/geminiService';
+import { getSpiritualGuidance, generateImageForTopic } from '../services/geminiService.ts';
 
 interface TopicPageProps {
   topic: string;
