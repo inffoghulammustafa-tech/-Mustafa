@@ -22,32 +22,32 @@ const App: React.FC = () => {
   const [customPosts, setCustomPosts] = useState<CustomPost[]>([]);
 
   useEffect(() => {
-    // Load custom posts from localStorage
     const saved = localStorage.getItem('rohani_posts');
     if (saved) {
       setCustomPosts(JSON.parse(saved));
     }
   }, [currentPage]);
 
-  // Fallback image for any broken links
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.src = "https://images.unsplash.com/photo-1519834125748-958a846c483c?auto=format&fit=crop&q=80&w=800";
     e.currentTarget.onerror = null;
   };
 
   const categories = [
-    { id: "Amazing", label: "حیرت انگیز", image: "https://i.pinimg.com/736x/73/3d/93/733d93f349fe6ca44b6362ee61feb41c.jpg" },
-    { id: "Bawaseer", label: "بواسیر", image: "https://i.ytimg.com/vi/3ILU4Clq8mY/maxresdefault.jpg" },
-    { id: "Dolat", label: "دولت", image: "https://i.ytimg.com/vi/lG66vN_uL_Y/hq720.jpg" },
-    { id: "health Taweez", label: "صحت کے تعویذ", image: "https://i.ytimg.com/vi/rY9X8Q6E8bI/maxresdefault.jpg" },
-    { id: "Marriage", label: "شادی", image: "https://i.pinimg.com/736x/79/19/8d/79198d358646ac581d7cf100ede77298.jpg" },
-    { id: "Muhabbat", label: "محبت", image: "https://i.ytimg.com/vi/hvaV2Md_3TA/hq720.jpg" },
-    { id: "Nasha", label: "نشہ", image: "https://i.ytimg.com/vi/v5OQ_0A9_kM/maxresdefault.jpg" },
-    { id: "Period", label: "ماہواری", image: "https://i.ytimg.com/vi/rY9X8Q6E8bI/maxresdefault.jpg" },
-    { id: "Rohani Ilaj", label: "روحانی علاج", image: "https://i.pinimg.com/736x/13/16/50/13165004dae601800cefd741a2cf5425.jpg" },
-    { id: "shifa", label: "شفاء", image: "https://i.ytimg.com/vi/XbUb_PDHOL0/maxresdefault.jpg" },
-    { id: "taweez", label: "تعویذ", image: "https://i.pinimg.com/736x/d5/74/68/d57468fb3a23a9ed1afe84a9d43630f9.jpg" },
-    { id: "Wazifa", label: "وظیفہ", image: "https://i.ytimg.com/vi/lG66vN_uL_Y/hq720.jpg" }
+    { id: "Amazing", label: "حیرت انگیز", image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=800" },
+    { id: "Bawaseer", label: "بواسیر", image: "https://images.unsplash.com/photo-1530213786676-41ad9f7736f6?auto=format&fit=crop&q=80&w=800" },
+    { id: "Dolat", label: "دولت", image: "https://images.unsplash.com/photo-1518458028434-a23ad7365194?auto=format&fit=crop&q=80&w=800" },
+    { id: "health Taweez", label: "صحت کے تعویذ", image: "https://images.unsplash.com/photo-1505751172107-5739a0077203?auto=format&fit=crop&q=80&w=800" },
+    { id: "Marriage", label: "شادی", image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800" },
+    { id: "Muhabbat", label: "محبت", image: "https://images.unsplash.com/photo-1516589174184-c685ca33d2b0?auto=format&fit=crop&q=80&w=800" },
+    { id: "Nasha", label: "نشہ", image: "https://images.unsplash.com/photo-1527137342181-19aab11a8ee1?auto=format&fit=crop&q=80&w=800" },
+    { id: "Period", label: "ماہواری", image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800" },
+    { id: "Rohani Ilaj", label: "روحانی علاج", image: "https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=800" },
+    { id: "shifa", label: "شفاء", image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800" },
+    { id: "taweez", label: "تعویذ", image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" },
+    { id: "Wazifa", label: "وظیفہ", image: "https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&q=80&w=800" },
+    { id: "Sample Page", label: "نمونہ صفحہ", image: "https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&q=80&w=800" },
+    { id: "Uncategorized", label: "غیر زمرہ بند", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800" }
   ];
 
   const statsItems = [
@@ -85,7 +85,7 @@ const App: React.FC = () => {
                 <div key={post.id} className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-emerald-100 shadow-2xl flex flex-col hover:shadow-emerald-900/10 transition-shadow">
                   <div className="w-full">
                     <img 
-                      src={post.image || 'https://images.unsplash.com/photo-1519834125748-958a846c483c'} 
+                      src={post.image} 
                       alt={post.title} 
                       className="w-full h-auto object-cover max-h-[600px]"
                       onError={handleImageError}
@@ -110,10 +110,10 @@ const App: React.FC = () => {
                 </div>
               ))}
 
-              {/* Service 1: Marriage (Hardcoded original) */}
+              {/* Hardcoded Featured */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
-                  <img src="https://i.pinimg.com/736x/79/19/8d/79198d358646ac581d7cf100ede77298.jpg" alt="Marriage Solution" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                  <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="Marriage Solution" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
                 <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Surah Muzammil Ka Naqsh For Marriage</h3>
@@ -122,14 +122,13 @@ const App: React.FC = () => {
                   <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">روحانی شادی سروسز</h4>
                   <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">ایسے افراد جو رشتہ نہ ہو نے سے یا بار باربغیر کسی وجہ کے انکار ہو جانے کی وجہ سے پریشان ہیں۔ ان کے لئے ہمارے روحانی ماہرین نے سورۃ المزمل کا خاص نقش تیار کیا ہے۔..</p>
                   <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-900/10 text-xl">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
                       <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* Older Entries Link */}
               <div className="max-w-5xl mx-auto flex justify-center pt-8">
                 <a href="https://www.rohaniilajsite.com/page/2/" className="px-10 py-5 bg-emerald-50 border border-emerald-200 rounded-full text-emerald-700 font-black hover:bg-emerald-100 transition-all flex items-center gap-3 shadow-md hover:shadow-xl active:scale-95 text-lg">
                   <i className="fa-solid fa-angles-left text-xl"></i> Older Entries
@@ -193,7 +192,7 @@ const App: React.FC = () => {
               <div className="lg:flex items-center gap-16">
                 <div className="lg:w-1/2 mb-12 lg:mb-0">
                   <div className="relative">
-                    <img src="https://play-lh.googleusercontent.com/6i-Xci0mr9JJgTwUCw7N5TPOZvl-FHbu3AItv5jf26UEdgunNu9V3FBpuvSoHTTOFq4" alt="About Our Healing" className="rounded-3xl shadow-2xl relative z-10 w-full" onError={handleImageError} />
+                    <img src="https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=800" alt="About Our Healing" className="rounded-3xl shadow-2xl relative z-10 w-full" onError={handleImageError} />
                   </div>
                 </div>
                 <div className="lg:w-1/2">
