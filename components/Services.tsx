@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Service } from '../types';
 
@@ -49,37 +50,37 @@ const SERVICES: Service[] = [
 const Services: React.FC = () => {
   const colorMap: Record<string, { border: string, iconBg: string, iconText: string, glow: string }> = {
     emerald: { 
-      border: 'border-emerald-100', 
+      border: 'border-emerald-100/50', 
       iconBg: 'bg-emerald-100', 
       iconText: 'text-emerald-700',
       glow: 'shadow-emerald-500/10'
     },
     pink: { 
-      border: 'border-pink-100', 
+      border: 'border-pink-100/50', 
       iconBg: 'bg-pink-100', 
       iconText: 'text-pink-700',
       glow: 'shadow-pink-500/10'
     },
     indigo: { 
-      border: 'border-indigo-100', 
+      border: 'border-indigo-100/50', 
       iconBg: 'bg-indigo-100', 
       iconText: 'text-indigo-700',
       glow: 'shadow-indigo-500/10'
     },
     blue: { 
-      border: 'border-blue-100', 
+      border: 'border-blue-100/50', 
       iconBg: 'bg-blue-100', 
       iconText: 'text-blue-700',
       glow: 'shadow-blue-500/10'
     },
     green: { 
-      border: 'border-green-100', 
+      border: 'border-green-100/50', 
       iconBg: 'bg-green-100', 
       iconText: 'text-green-700',
       glow: 'shadow-green-500/10'
     },
     amber: { 
-      border: 'border-amber-100', 
+      border: 'border-amber-100/50', 
       iconBg: 'bg-amber-100', 
       iconText: 'text-amber-700',
       glow: 'shadow-amber-500/10'
@@ -87,7 +88,7 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-32 bg-white overflow-hidden">
+    <section id="services" className="py-32 spiritual-radiance overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
           <h2 className="text-emerald-600 font-black uppercase tracking-[0.4em] text-xs mb-4">Our Expertise</h2>
@@ -100,12 +101,11 @@ const Services: React.FC = () => {
             <div 
               key={service.id} 
               className={`
-                relative bg-white p-10 md:p-12 rounded-[2.5rem] border ${colorMap[service.color].border}
-                transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group
-                shadow-xl shadow-gray-100 overflow-hidden
+                relative bg-glow-surface p-10 md:p-12 rounded-[2.5rem] border ${colorMap[service.color].border}
+                transition-all duration-500 aura-glow hover:-translate-y-2 group
+                overflow-hidden
               `}
             >
-              {/* Icon Circle Badge - Enhanced scale on hover */}
               <div className={`
                 absolute top-8 right-8 w-14 h-14 rounded-full 
                 flex items-center justify-center transition-all duration-500 
@@ -136,7 +136,6 @@ const Services: React.FC = () => {
                 </div>
               </div>
 
-              {/* Decorative subtle background gradient */}
               <div className={`
                 absolute -bottom-20 -left-20 w-40 h-40 rounded-full blur-[60px] opacity-0
                 group-hover:opacity-30 transition-opacity duration-700
