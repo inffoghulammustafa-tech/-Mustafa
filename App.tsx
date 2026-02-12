@@ -34,19 +34,19 @@ const App: React.FC = () => {
   };
 
   const categories = [
-    { id: "Amazing", label: "حیرت انگیز", image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=800" },
-    { id: "Bawaseer", label: "بواسیر", image: "https://images.unsplash.com/photo-1530213786676-41ad9f7736f6?auto=format&fit=crop&q=80&w=800" },
+    { id: "Rohani Ilaj", label: "روحانی علاج", image: "https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=800" },
+    { id: "Free Istikhara", label: "فری استخارہ", image: "https://qiratquran.com/wp-content/uploads/2025/10/dua-e-istikhara.webp" },
+    { id: "Love Marriage", label: "پسند کی شادی", image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800" },
+    { id: "Black Magic Help", label: "کالے جادو کا توڑ", image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&q=80&w=800" },
+    { id: "Family Problems", label: "گھریلو مسائل", image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1200" },
     { id: "Dolat", label: "دولت", image: "https://images.unsplash.com/photo-1518458028434-a23ad7365194?auto=format&fit=crop&q=80&w=800" },
     { id: "health Taweez", label: "صحت کے تعویذ", image: "https://images.unsplash.com/photo-1505751172107-5739a0077203?auto=format&fit=crop&q=80&w=800" },
-    { id: "Marriage", label: "شادی", image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800" },
     { id: "Muhabbat", label: "محبت", image: "https://images.unsplash.com/photo-1516589174184-c685ca33d2b0?auto=format&fit=crop&q=80&w=800" },
-    { id: "Nasha", label: "نشہ", image: "https://images.unsplash.com/photo-1527137342181-19aab11a8ee1?auto=format&fit=crop&q=80&w=800" },
-    { id: "Period", label: "ماہواری", image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800" },
-    { id: "Rohani Ilaj", label: "روحانی علاج", image: "https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=800" },
+    { id: "Wazifa", label: "وظیفہ", image: "https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&q=80&w=800" },
+    { id: "Amazing", label: "حیرت انگیز", image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=800" },
+    { id: "Bawaseer", label: "بواسیر", image: "https://images.unsplash.com/photo-1530213786676-41ad9f7736f6?auto=format&fit=crop&q=80&w=800" },
     { id: "shifa", label: "شفاء", image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800" },
     { id: "taweez", label: "تعویذ", image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" },
-    { id: "Wazifa", label: "وظیفہ", image: "https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&q=80&w=800" },
-    { id: "Sample Page", label: "نمونہ صفحہ", image: "https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&q=80&w=800" },
     { id: "Uncategorized", label: "غیر زمرہ بند", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800" }
   ];
 
@@ -105,8 +105,8 @@ const App: React.FC = () => {
                 </div>
               ))}
 
-              {/* Box 1 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col">
+              {/* Box 1 - Marriage */}
+              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col cursor-pointer hover:border-emerald-300 transition-colors" onClick={() => handlePageChange('Love Marriage')}>
                 <div className="w-full">
                   <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200" alt="Marriage Solution" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
@@ -117,15 +117,15 @@ const App: React.FC = () => {
                   <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-emerald-700 pr-6">روحانی شادی سروسز</h4>
                   <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">ایسے افراد جو رشتہ نہ ہو نے سے یا بار باربغیر کسی وجہ کے انکار ہو جانے کی وجہ سے پریشان ہیں۔ ان کے لئے ہمارے روحانی ماہرین نے سورۃ المزمل کا خاص نقش تیار کیا ہے۔ اس نقش کی برکت سے شادی کی تمام رکاوٹیں ختم ہو جاتی ہیں۔</p>
                   <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
-                      <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
-                    </a>
+                    <button onClick={(e) => { e.stopPropagation(); handlePageChange('Love Marriage'); }} className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
+                      تفصیل دیکھیں
+                    </button>
                   </div>
                 </div>
               </div>
 
-              {/* Box 2 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col">
+              {/* Box 2 - Black Magic */}
+              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col cursor-pointer hover:border-emerald-300 transition-colors" onClick={() => handlePageChange('Black Magic Help')}>
                 <div className="w-full">
                   <img src="https://i.pinimg.com/736x/12/7a/fe/127afedd5fd88ea3117cfd9194a5f15b.jpg" alt="Black Magic Help" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
@@ -136,47 +136,9 @@ const App: React.FC = () => {
                   <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-emerald-700 pr-6">کالے جادو کا نوری توڑ</h4>
                   <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">اگر آپ کو لگتا ہے کہ آپ پر کسی نے جادو کیا ہے یا آپ کی ترقی رک گئی ہے، تو نوری علم کے ذریعے اس کا مکمل خاتمہ ممکن ہے۔ ہماری دعاؤں اور تعویذات سے آپ کو مستقل تحفظ ملے گا۔</p>
                   <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
-                      <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Box 7 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col">
-                <div className="w-full">
-                  <img src="https://i.pinimg.com/736x/a8/9b/97/a89b9750b8a9ead21ebe5c88071cbeff.jpg" alt="Family Problems" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
-                </div>
-                <div className="w-full bg-[#fef9c3] py-12 border-b border-yellow-100 text-center">
-                  <h3 className="text-emerald-950 text-2xl md:text-5xl font-black tracking-wide px-6">Gharelu Jhagron Ka Rohani Hal</h3>
-                </div>
-                <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-emerald-700 pr-6">گھریلو ناچاقی اور سکون</h4>
-                  <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">اگر آپ کے گھر میں ہر وقت لڑائی جھگڑا رہتا ہے یا میاں بیوی میں نا اتفاقی ہے، تو ہمارے بتائے گئے وظائف اور دم سے گھر میں سکون اور محبت دوبارہ قائم ہو سکتی ہے۔</p>
-                  <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
-                      <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Box 8 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col">
-                <div className="w-full">
-                  <img src="https://i.pinimg.com/736x/12/d5/16/12d516c91db5bc6df814eb07867aa457.jpg" alt="Love Marriage" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
-                </div>
-                <div className="w-full bg-[#f0fdf4] py-12 border-b border-emerald-100 text-center">
-                  <h3 className="text-emerald-950 text-2xl md:text-5xl font-black tracking-wide px-6">Naqsh For Love Marriage</h3>
-                </div>
-                <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-emerald-700 pr-6">پسند کی شادی کا نقش</h4>
-                  <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">اگر آپ اپنی مرضی کی شادی کرنا چاہتے ہیں اور اس میں رکاوٹیں آ رہی ہیں، تو ہمارا خاص تیار کردہ نقش آپ کی تمام مشکلات حل کرنے میں معاون ثابت ہوگا۔ اللہ کے کرم سے راستے ہموار ہو جائیں گے۔</p>
-                  <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
-                      <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
-                    </a>
+                    <button onClick={(e) => { e.stopPropagation(); handlePageChange('Black Magic Help'); }} className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
+                      تفصیل دیکھیں
+                    </button>
                   </div>
                 </div>
               </div>

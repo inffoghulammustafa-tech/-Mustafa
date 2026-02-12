@@ -13,51 +13,134 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
   const [imageUrl, setImageUrl] = useState<string | null>(initialImage || null);
   const [loading, setLoading] = useState(true);
 
+  // The "System" - Predefined high-quality Urdu content
   const specialContent: Record<string, { text: string, img: string }> = {
     'Free Istikhara': {
       img: 'https://qiratquran.com/wp-content/uploads/2025/10/dua-e-istikhara.webp',
       text: `# فری استخارہ
-اس پیج کا مقصد لوگوں کی مشکلات میں ان کی رہنمائی کرنا ہے۔
-استخارہ کا اصل مطلب اللہ سے خیر مانگنا ہے۔ اپنی زندگی کے اہم فیصلوں میں اللہ کی رضا شامل کریں۔ ہم فی سبیل اللہ (فری) استخارہ کر کے آپ کو صحیح راستہ دکھائیں گے۔
+اللہ تعالیٰ سے اپنے معاملات میں بہتری مانگنا ہی استخارہ ہے۔
+استخارہ سنتِ نبوی ہے جس کے ذریعے بندہ اللہ تعالیٰ سے اپنے معاملے میں خیر کا طلب گار ہوتا ہے۔
 
-## استخارہ کی اہمیت
-استخارہ سنتِ نبوی ہے جس کے ذریعے بندہ اللہ تعالیٰ سے اپنے معاملے میں خیر کا طلب گار ہوتا ہے۔ یہ پریشانیوں اور تذبذب سے نکلنے کا بہترین روحانی ذریعہ ہے۔
+## استخارہ کیوں ضروری ہے؟
+اپنی زندگی کے اہم فیصلے جیسے شادی، کاروبار یا سفر سے قبل اللہ کی مرضی جاننا سکون کا باعث بنتا ہے۔
 
-## رابطہ کا طریقہ
-آپ ہم سے براہ راست واٹس ایپ پر رابطہ کر کے اپنا نام اور مقصد بیان کر سکتے ہیں۔ ہم وقت کی پابندی اور رازداری کے ساتھ آپ کی رہنمائی کریں گے۔`
+## ہمارا طریقہ کار
+ہم مکمل رازداری کے ساتھ آپ کے لیے استخارہ کرتے ہیں اور آپ کو صحیح قرآنی رہنمائی فراہم کرتے ہیں۔`
     },
     'Love Marriage': {
-      img: 'https://www.christianitytoday.com/wp-content/uploads/2023/02/133346.jpg',
+      img: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200',
       text: `# پسند کی شادی (Love Marriage)
-شادی ایک مقدس رشتہ ہے اور اس میں آنے والی رکاوٹوں کا حل قرآن و سنت کی روشنی میں ممکن ہے۔ ہمارا رویہ اس معاملے میں ہمدردانہ ہے کیونکہ یہ ایک جذباتی فیصلہ ہوتا ہے۔
+شادی ایک مقدس رشتہ ہے، اس میں آنے والی رکاوٹیں ختم کریں۔
+اگر آپ پسند کی شادی کرنا چاہتے ہیں لیکن گھریلو یا معاشرتی رکاوٹیں حائل ہیں تو مایوس نہ ہوں۔
 
-## رکاوٹوں کا خاتمہ
-ماں باپ کو منانے کے لئے روحانی حل اور رکاوٹوں کو دور کرنے کے مخصوص وظائف فراہم کیے جاتے ہیں۔ اکثر معاشرتی دباؤ یا غلط فہمیوں کی وجہ سے رشتے طے نہیں پاتے، جنہیں دعا کے ذریعے حل کیا جا سکتا ہے۔
+## رکاوٹوں کا حل
+ماں باپ کو منانے کے لیے خاص دعائیں اور رکاوٹیں دور کرنے کے وظائف فراہم کیے جاتے ہیں۔
 
-## کامیابی کی مثالیں
-ہمارے پاس کثیر تعداد میں ایسے جوڑے ہیں جو روحانی رہنمائی کے بعد آج ایک خوشحال ازدواجی زندگی گزار رہے ہیں۔`
+## نوری علم کا کرشمہ
+نوری علم کے ذریعے دلوں میں محبت پیدا کی جا سکتی ہے تاکہ آپ کی ازدواجی زندگی خوشحال ہو سکے۔`
+    },
+    'Black Magic Help': {
+      img: 'https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&q=80&w=1200',
+      text: `# کالے جادو کا مکمل توڑ
+قرآنی آیات کے ذریعے ہر قسم کے جادو اور بندش کا خاتمہ۔
+اگر آپ کا کاروبار بند ہے یا صحت مسلسل خراب رہتی ہے تو یہ جادو کے اثرات ہو سکتے ہیں۔
+
+## نوری علاج
+ہم صرف قرآنی کلام اور نوری حصار کے ذریعے علاج کرتے ہیں جو کہ مکمل طور پر جائز اور شرعی ہے۔
+
+## مستقل تحفظ
+علاج کے بعد آپ کو خاص حفاظتی وظائف دیے جاتے ہیں تاکہ دشمن دوبارہ نقصان نہ پہنچا سکے۔`
+    },
+    'Family Problems': {
+      img: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1200',
+      text: `# گھریلو ناچاقی اور جھگڑوں کا حل
+گھر کے ماحول کو دوبارہ پرسکون اور محبت بھرا بنائیں۔
+میاں بیوی کی ناچاقی ہو یا ساس بہو کے جھگڑے، روحانی حل موجود ہے۔
+
+## محبت اور اتفاق
+خاص قرآنی نقش اور دم کے ذریعے گھر کے افراد میں الفت پیدا کی جاتی ہے۔
+
+## سکونِ قلب
+اللہ کے ذکر اور مخصوص دعاؤں سے آپ کا گھر جنت کا نمونہ بن سکتا ہے۔`
+    },
+    'Dolat': {
+      img: 'https://images.unsplash.com/photo-1518458028434-a23ad7365194?auto=format&fit=crop&q=80&w=1200',
+      text: `# رزق میں برکت اور فراوانی
+کاروباری بندش کا خاتمہ اور دولت میں برکت کے وظائف۔
+اگر آپ مالی تنگی کا شکار ہیں یا آپ کے رزق میں برکت نہیں رہی تو قرآنی عمل آزمائیں۔
+
+## بندشِ رزق کا توڑ
+حاسدین کی نظرِ بد یا جادو کی وجہ سے لگی بندشوں کو دور کریں۔
+
+## برکت والا عمل
+خاص وظائف جو اللہ کے فضل سے آپ کے دروازے رزق کے لیے کھول دیں گے۔`
+    },
+    'health Taweez': {
+      img: 'https://images.unsplash.com/photo-1505751172107-5739a0077203?auto=format&fit=crop&q=80&w=1200',
+      text: `# شفائے کاملہ اور صحت کے تعویذ
+دیرینہ بیماریوں اور نفسیاتی مسائل کا روحانی علاج۔
+اگر دوا کام نہیں کر رہی تو اللہ کے کلام سے مدد لیں۔
+
+## دم اور نقش
+قرآنی آیات سے تیار کردہ خاص نقوش جو شفاء کا باعث بنتے ہیں۔
+
+## ذہنی سکون
+ڈیپریشن، خوف اور بے چینی کا مکمل روحانی حل۔`
+    },
+    'Muhabbat': {
+      img: 'https://images.unsplash.com/photo-1516589174184-c685ca33d2b0?auto=format&fit=crop&q=80&w=1200',
+      text: `# تسخیرِ قلب اور جائز محبت
+جائز مقصد کے لیے کسی کے دل میں جگہ پیدا کریں۔
+میاں بیوی میں محبت بڑھانے یا بچھڑے ہوئے کو ملانے کا روحانی عمل۔
+
+## حب کا عمل
+قرآنی نوری علم کے ذریعے جائز محبت کے لیے خاص دعائیں اور وظائف۔
+
+## رشتوں میں بہتری
+خونی رشتوں اور دوستی میں آئی دراڑیں ختم کرنے کا حل۔`
+    },
+    'Rohani Ilaj': {
+      img: 'https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=1200',
+      text: `# مکمل روحانی علاج (Rohani Ilaj)
+ہر مشکل کا حل اللہ کے کلام میں موجود ہے۔
+ہم آپ کو قرآن و سنت کے مطابق روحانی رہنمائی فراہم کرتے ہیں۔
+
+## ہمارا مقصد
+انسانیت کی خدمت اور لوگوں کو شرک سے بچا کر نوری علم کی طرف لانا۔
+
+## ہر مسئلے کا حل
+چاہے وہ دنیاوی ہو یا روحانی، ہم سے رجوع کریں اور فی سبیل اللہ مشورہ لیں۔`
     }
   };
 
   useEffect(() => {
     const fetchContent = async () => {
       setLoading(true);
-      if (specialContent[topic]) {
-        setContent(specialContent[topic].text);
-        setImageUrl(specialContent[topic].img);
-        await new Promise(r => setTimeout(r, 1000));
+      
+      // Check if topic exists in our system (direct match or case insensitive)
+      const systemTopic = Object.keys(specialContent).find(k => k.toLowerCase() === topic.toLowerCase());
+
+      if (systemTopic) {
+        setContent(specialContent[systemTopic].text);
+        setImageUrl(specialContent[systemTopic].img);
+        await new Promise(r => setTimeout(r, 800)); // Smooth transition
         setLoading(false);
         return;
       }
 
-      const prompt = `براہ کرم عنوان: "${topic}" پر ایک جامع، پیشہ ورانہ اور روحانی طور پر حوصلہ افزا مضمون اردو میں لکھیں۔ مواد کو ہیڈنگز اور بلٹ پوائنٹس کے ساتھ ترتیب دیں۔ لہجہ انتہائی احترام والا اور پر امید ہونا چاہیے۔`;
-      const [textResult, imageResult] = await Promise.all([
-        getSpiritualGuidance(prompt),
-        !initialImage ? generateImageForTopic(topic) : Promise.resolve(null)
-      ]);
+      // AI Fallback if not in system
+      try {
+        const prompt = `براہ کرم عنوان: "${topic}" پر ایک جامع، پیشہ ورانہ اور روحانی طور پر حوصلہ افزا مضمون اردو میں لکھیں۔ مواد کو ہیڈنگز اور بلٹ پوائنٹس کے ساتھ ترتیب دیں۔ لہجہ انتہائی احترام والا اور پر امید ہونا چاہیے۔`;
+        const [textResult, imageResult] = await Promise.all([
+          getSpiritualGuidance(prompt),
+          !initialImage ? generateImageForTopic(topic) : Promise.resolve(null)
+        ]);
 
-      setContent(textResult);
-      if (!initialImage && imageResult) setImageUrl(imageResult);
+        setContent(textResult);
+        if (!initialImage && imageResult) setImageUrl(imageResult);
+      } catch (err) {
+        setContent(`# ${topic}\nمعذرت، اس وقت مواد لوڈ کرنے میں دشواری ہو رہی ہے۔ براہ کرم واٹس ایپ پر رابطہ کریں۔`);
+      }
       setLoading(false);
     };
     fetchContent();
@@ -66,45 +149,45 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
   return (
     <div className="pt-32 pb-20 bg-[#fefce8] min-h-screen" dir="rtl">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <button onClick={onBack} className="flex items-center gap-4 text-emerald-900 font-black mb-10 hover:gap-6 transition-all font-arabic text-2xl">
-          <i className="fa-solid fa-arrow-right"></i>
+        <button onClick={onBack} className="flex items-center gap-4 text-emerald-900 font-black mb-10 hover:gap-6 transition-all font-arabic text-2xl group">
+          <i className="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
           واپس ہوم پیج پر جائیں
         </button>
 
-        <div className="bg-white rounded-[3rem] shadow-xl overflow-hidden border border-emerald-50">
-          {/* Header Block */}
-          <div className="bg-[#064e3b] p-12 md:p-24 text-center relative overflow-hidden">
-            <span className="inline-block px-6 py-2 bg-black/20 text-yellow-300 text-xs font-black tracking-widest uppercase rounded-full mb-8 font-arabic">
-              روحانی معلومات کا خزانہ
+        <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-emerald-50">
+          <div className="bg-[#064e3b] p-12 md:p-20 text-center relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
+            <span className="relative z-10 inline-block px-6 py-2 bg-black/20 text-yellow-300 text-xs font-black tracking-widest uppercase rounded-full mb-8 font-arabic">
+              روحانی رہنمائی و مشورہ
             </span>
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight font-arabic tracking-tight">{topic}</h1>
-            <div className="w-32 h-2.5 bg-yellow-400 mx-auto rounded-full shadow-lg"></div>
+            <h1 className="relative z-10 text-5xl md:text-7xl font-black text-white mb-8 leading-tight font-arabic">{topic}</h1>
+            <div className="relative z-10 w-24 h-2 bg-yellow-400 mx-auto rounded-full"></div>
           </div>
 
           {imageUrl && (
-            <div className="w-full h-auto max-h-[600px] overflow-hidden relative">
-              <img src={imageUrl} alt={topic} className={`w-full h-full object-cover transition-all duration-1000 ${loading ? 'blur-md brightness-50' : 'blur-0 brightness-100'}`} />
-              {loading && <div className="absolute inset-0 z-20 overflow-hidden"><div className="w-full h-2 bg-yellow-400 absolute animate-[scan_2s_linear_infinite]"></div></div>}
+            <div className="w-full h-auto max-h-[500px] overflow-hidden relative border-b-4 border-emerald-900/10">
+              <img src={imageUrl} alt={topic} className={`w-full h-full object-cover transition-all duration-1000 ${loading ? 'blur-md scale-110' : 'blur-0 scale-100'}`} />
+              {loading && <div className="absolute inset-0 z-20 overflow-hidden bg-black/10"><div className="w-full h-1.5 bg-yellow-400 absolute animate-[scan_2.5s_linear_infinite]"></div></div>}
             </div>
           )}
 
-          <div className="p-10 md:p-24 text-right">
+          <div className="p-10 md:p-20 text-right">
             {loading ? (
-              <div className="flex flex-col items-center justify-center py-24">
-                <div className="w-20 h-20 border-8 border-emerald-50 border-t-emerald-700 rounded-full animate-spin"></div>
-                <h3 className="text-emerald-950 font-black mt-12 text-4xl font-arabic">صفحہ کی ترتیب نو کی جا رہی ہے...</h3>
+              <div className="flex flex-col items-center justify-center py-20">
+                <div className="w-16 h-16 border-4 border-emerald-100 border-t-emerald-600 rounded-full animate-spin"></div>
+                <h3 className="text-emerald-900 font-bold mt-8 text-2xl font-arabic">معلومات تلاش کی جا رہی ہیں...</h3>
               </div>
             ) : (
-              <div className="prose prose-emerald lg:prose-2xl max-w-none text-slate-800 leading-[2.2] font-arabic">
+              <div className="prose prose-emerald lg:prose-2xl max-w-none text-slate-800 font-arabic">
                 {content.split('\n').map((paragraph, idx) => (
                   paragraph.trim() ? (
-                    <div key={idx} className="mb-10">
+                    <div key={idx} className="mb-8">
                       {paragraph.startsWith('#') ? (
-                        <h2 className={`${paragraph.startsWith('##') ? 'text-3xl md:text-5xl' : 'text-4xl md:text-6xl'} font-black text-emerald-900 mt-12 mb-8 border-r-8 border-emerald-600 pr-8`}>
+                        <h2 className={`${paragraph.startsWith('##') ? 'text-3xl md:text-4xl' : 'text-4xl md:text-6xl'} font-black text-emerald-900 mb-6 border-r-4 border-yellow-400 pr-6`}>
                           {paragraph.replace(/#/g, '').trim()}
                         </h2>
                       ) : (
-                        <p className="text-2xl md:text-3xl font-medium leading-relaxed opacity-90">
+                        <p className="text-2xl md:text-3xl leading-[1.8] opacity-90">
                           {paragraph}
                         </p>
                       )}
@@ -115,15 +198,16 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
             )}
 
             {!loading && (
-              <div className="mt-20 pt-20 border-t-4 border-emerald-50">
-                <div className="bg-[#022c22] rounded-[3rem] p-12 md:p-24 text-center">
-                  <h4 className="text-4xl md:text-6xl font-black text-white mb-8 font-arabic">کیا آپ کا مسئلہ مختلف ہے؟</h4>
-                  <p className="text-yellow-100/80 text-2xl md:text-3xl leading-relaxed font-arabic mb-12">
-                     {topic} کے بارے میں نجی مشاورت اور خاص روحانی حل کے لیے براہ راست رابطہ کریں۔
+              <div className="mt-16 pt-16 border-t-2 border-emerald-50">
+                <div className="bg-[#022c22] rounded-[2.5rem] p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
+                   <div className="absolute top-0 right-0 p-4 opacity-10 text-white text-9xl -rotate-12"><i className="fa-solid fa-star-and-crescent"></i></div>
+                  <h4 className="relative z-10 text-3xl md:text-5xl font-black text-white mb-6 font-arabic tracking-tight">ابھی حل تلاش کریں</h4>
+                  <p className="relative z-10 text-emerald-100/70 text-xl md:text-2xl mb-10 font-arabic">
+                    مزید تفصیلات اور نجی مشاورت کے لیے ہمارے ماہر سے واٹس ایپ پر بات کریں۔
                   </p>
-                  <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-16 py-8 bg-yellow-400 hover:bg-yellow-300 text-emerald-950 font-black rounded-3xl transition-all shadow-xl text-3xl font-arabic">
-                    <i className="fa-brands fa-whatsapp text-4xl"></i>
-                    واٹس ایپ کریں
+                  <a href="https://wa.me/923000000000" className="relative z-10 inline-flex items-center gap-5 px-12 py-6 bg-yellow-400 hover:bg-yellow-300 text-emerald-950 font-black rounded-2xl transition-all shadow-xl text-2xl font-arabic group">
+                    <i className="fa-brands fa-whatsapp text-3xl group-hover:rotate-12 transition-transform"></i>
+                    واٹس ایپ پر رابطہ کریں
                   </a>
                 </div>
               </div>
