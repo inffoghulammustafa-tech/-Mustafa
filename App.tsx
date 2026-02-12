@@ -72,39 +72,33 @@ const App: React.FC = () => {
         <>
           <Hero />
 
-          <section className="py-24 bg-[#fdfcf9]">
+          <section className="py-24 bg-[#fefce8]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
               <div className="text-center mb-16">
-                <h2 className="text-amber-700 font-black uppercase tracking-[0.2em] text-sm mb-4">Our Specialization</h2>
-                <h3 className="text-4xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight">Featured Content</h3>
-                <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-500 via-amber-500 to-yellow-500 mx-auto rounded-full mb-12 shadow-lg"></div>
+                <h2 className="text-emerald-700 font-black uppercase tracking-[0.2em] text-sm mb-4">Our Specialization</h2>
+                <h3 className="text-4xl md:text-7xl font-black text-emerald-950 mb-6 tracking-tight">Featured Content</h3>
+                <div className="w-24 h-2 bg-yellow-400 mx-auto rounded-full mb-12"></div>
               </div>
 
-              {/* Dynamic Posts from Admin Panel */}
+              {/* Dynamic Posts */}
               {customPosts.map(post => (
-                <div key={post.id} className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col hover:shadow-amber-900/10 transition-all duration-500 group">
-                  <div className="w-full relative overflow-hidden">
-                    <img 
-                      src={post.image} 
-                      alt={post.title} 
-                      className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700"
-                      onError={handleImageError}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div key={post.id} className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col group">
+                  <div className="w-full relative">
+                    <img src={post.image} alt={post.title} className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                   </div>
-                  <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                    <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">
+                  <div className="w-full bg-[#f0fdf4] py-12 border-b border-emerald-100 text-center">
+                    <h3 className="text-emerald-900 text-2xl md:text-5xl font-black tracking-wide px-6">
                       {post.title}
                     </h3>
                   </div>
                   <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                    <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">{post.category}</h4>
+                    <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-yellow-400 pr-6">{post.category}</h4>
                     <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 whitespace-pre-wrap font-medium">
                       {post.content.length > 300 ? post.content.substring(0, 300) + '...' : post.content}
                     </p>
                     <div className="flex justify-start">
-                      <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl group/btn">
-                        <i className="fa-brands fa-whatsapp text-4xl group-hover:scale-110 transition-transform"></i> ابھی رابطہ کریں
+                      <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
+                        <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
                       </a>
                     </div>
                   </div>
@@ -112,18 +106,18 @@ const App: React.FC = () => {
               ))}
 
               {/* Box 1 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col group">
-                <div className="w-full relative overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200" alt="Marriage Solution" className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700" onError={handleImageError} />
+              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200" alt="Marriage Solution" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
-                <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                  <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">Surah Muzammil Ka Naqsh For Marriage</h3>
+                <div className="w-full bg-[#fef9c3] py-12 border-b border-yellow-100 text-center">
+                  <h3 className="text-emerald-950 text-2xl md:text-5xl font-black tracking-wide px-6">Surah Muzammil Ka Naqsh For Marriage</h3>
                 </div>
                 <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">روحانی شادی سروسز</h4>
+                  <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-emerald-700 pr-6">روحانی شادی سروسز</h4>
                   <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">ایسے افراد جو رشتہ نہ ہو نے سے یا بار باربغیر کسی وجہ کے انکار ہو جانے کی وجہ سے پریشان ہیں۔ ان کے لئے ہمارے روحانی ماہرین نے سورۃ المزمل کا خاص نقش تیار کیا ہے۔ اس نقش کی برکت سے شادی کی تمام رکاوٹیں ختم ہو جاتی ہیں۔</p>
                   <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
                       <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
                     </a>
                   </div>
@@ -131,94 +125,18 @@ const App: React.FC = () => {
               </div>
 
               {/* Box 2 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col group">
-                <div className="w-full relative overflow-hidden">
-                  <img src="https://i.pinimg.com/736x/12/7a/fe/127afedd5fd88ea3117cfd9194a5f15b.jpg" alt="Black Magic Help" className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700" onError={handleImageError} />
+              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://i.pinimg.com/736x/12/7a/fe/127afedd5fd88ea3117cfd9194a5f15b.jpg" alt="Black Magic Help" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
-                <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                  <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">Black Magic Protection (Noori Ilaj)</h3>
+                <div className="w-full bg-[#f0fdf4] py-12 border-b border-emerald-100 text-center">
+                  <h3 className="text-emerald-950 text-2xl md:text-5xl font-black tracking-wide px-6">Black Magic Protection (Noori Ilaj)</h3>
                 </div>
                 <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">کالے جادو کا نوری توڑ</h4>
+                  <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-emerald-700 pr-6">کالے جادو کا نوری توڑ</h4>
                   <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">اگر آپ کو لگتا ہے کہ آپ پر کسی نے جادو کیا ہے یا آپ کی ترقی رک گئی ہے، تو نوری علم کے ذریعے اس کا مکمل خاتمہ ممکن ہے۔ ہماری دعاؤں اور تعویذات سے آپ کو مستقل تحفظ ملے گا۔</p>
                   <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl">
-                      <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Box 3 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col group">
-                <div className="w-full relative overflow-hidden">
-                  <img src="https://i.pinimg.com/1200x/ee/f3/c9/eef3c9dc44ffb72619f389487e0d81c7.jpg" alt="UTI Treatment" className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700" onError={handleImageError} />
-                </div>
-                <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                  <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">Peshab Mein Jalan Ka Ilaj</h3>
-                </div>
-                <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">پیشاب کی جلن کا روحانی حل</h4>
-                  <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">پیشاب کی نالی کا انفیکشن یو ٹی آئی ایک عام مگر تکلیف دہ مسئلہ ہے۔ اگر آپ دواؤں کے باوجود آرام نہیں پا رہے تو ہمارا خاص نوری دم اور نقش آپ کی تکلیف دور کرنے میں مددگار ثابت ہوگا۔</p>
-                  <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl">
-                      <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Box 4 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col group">
-                <div className="w-full relative overflow-hidden">
-                  <img src="https://i.pinimg.com/736x/15/16/6c/15166cd30fb4e5601325ce40272a3bb2.jpg" alt="Kidney Stone" className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700" onError={handleImageError} />
-                </div>
-                <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                  <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">Gurde Ki Pathri Ka Rohani Ilaj</h3>
-                </div>
-                <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">گردے کی پتھری سے نجات</h4>
-                  <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">گردے کی پتھری کا درد ناقابل برداشت ہوتا ہے۔ اللہ کے فضل سے مخصوص قرآنی آیات کے دم سے پتھری کے اخراج میں آسانی پیدا ہوتی ہے اور مریض کو شفاء حاصل ہوتی ہے۔</p>
-                  <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl">
-                      <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Box 5 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col group">
-                <div className="w-full relative overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=1200" alt="Uterus Fibroids" className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700" onError={handleImageError} />
-                </div>
-                <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                  <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">Reham Ki Rasoli Ka Rohani Ilaj</h3>
-                </div>
-                <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">رحم کی رسولی کا علاج</h4>
-                  <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">خواتین کے مخصوص مسائل میں رحم کی رسولی ایک پیچیدہ مسئلہ ہے۔ آپریشن سے ڈرنے والی خواتین کے لئے ہمارے پاس خاص قرآنی دعائیں اور روحانی علاج موجود ہے جس سے رسولی بغیر تکلیف کے ختم ہو سکتی ہے۔</p>
-                  <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl">
-                      <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Box 6 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col group">
-                <div className="w-full relative overflow-hidden">
-                  <img src="https://i.pinimg.com/736x/9b/95/d5/9b95d54e7a2af50c5c30c0f005db9325.jpg" alt="Name Meanings" className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700" onError={handleImageError} />
-                </div>
-                <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                  <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">Names Meanings & Spiritual Secrets</h3>
-                </div>
-                <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">ناموں کے خفیہ روحانی اثرات</h4>
-                  <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">آپ کا نام آپ کی شخصیت اور تقدیر پر گہرے اثرات ڈالتا ہے۔ اپنے نام کے روحانی معنی، اعداد، اور اس سے وابستہ روحانی موافقت معلوم کرنے کے لئے ہم سے رجوع کریں۔ صحیح نام زندگی میں کامیابی کی کنجی ثابت ہو سکتا ہے۔</p>
-                  <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
                       <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
                     </a>
                   </div>
@@ -226,18 +144,18 @@ const App: React.FC = () => {
               </div>
 
               {/* Box 7 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col group">
-                <div className="w-full relative overflow-hidden">
-                  <img src="https://i.pinimg.com/736x/a8/9b/97/a89b9750b8a9ead21ebe5c88071cbeff.jpg" alt="Family Problems" className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700" onError={handleImageError} />
+              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://i.pinimg.com/736x/a8/9b/97/a89b9750b8a9ead21ebe5c88071cbeff.jpg" alt="Family Problems" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
-                <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                  <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">Gharelu Jhagron Ka Rohani Hal</h3>
+                <div className="w-full bg-[#fef9c3] py-12 border-b border-yellow-100 text-center">
+                  <h3 className="text-emerald-950 text-2xl md:text-5xl font-black tracking-wide px-6">Gharelu Jhagron Ka Rohani Hal</h3>
                 </div>
                 <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">گھریلو ناچاقی اور سکون</h4>
+                  <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-emerald-700 pr-6">گھریلو ناچاقی اور سکون</h4>
                   <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">اگر آپ کے گھر میں ہر وقت لڑائی جھگڑا رہتا ہے یا میاں بیوی میں نا اتفاقی ہے، تو ہمارے بتائے گئے وظائف اور دم سے گھر میں سکون اور محبت دوبارہ قائم ہو سکتی ہے۔</p>
                   <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
                       <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
                     </a>
                   </div>
@@ -245,18 +163,18 @@ const App: React.FC = () => {
               </div>
 
               {/* Box 8 */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[4rem] overflow-hidden border border-amber-100 shadow-2xl flex flex-col group">
-                <div className="w-full relative overflow-hidden">
-                  <img src="https://i.pinimg.com/736x/12/d5/16/12d516c91db5bc6df814eb07867aa457.jpg" alt="Love Marriage" className="w-full h-auto object-cover max-h-[600px] group-hover:scale-105 transition-transform duration-700" onError={handleImageError} />
+              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://i.pinimg.com/736x/12/d5/16/12d516c91db5bc6df814eb07867aa457.jpg" alt="Love Marriage" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
-                <div className="w-full bg-gradient-to-r from-emerald-50 via-amber-50 to-yellow-50 py-12 border-b border-amber-100/50 text-center">
-                  <h3 className="text-amber-900 text-2xl md:text-5xl font-black tracking-wide px-6">Naqsh For Love Marriage</h3>
+                <div className="w-full bg-[#f0fdf4] py-12 border-b border-emerald-100 text-center">
+                  <h3 className="text-emerald-950 text-2xl md:text-5xl font-black tracking-wide px-6">Naqsh For Love Marriage</h3>
                 </div>
                 <div className="w-full p-10 md:p-20 text-right" dir="rtl">
-                  <h4 className="text-4xl md:text-5xl font-black text-amber-900 mb-10 font-arabic border-r-8 border-amber-500 pr-6">پسند کی شادی کا نقش</h4>
+                  <h4 className="text-4xl md:text-5xl font-black text-emerald-800 mb-10 font-arabic border-r-8 border-emerald-700 pr-6">پسند کی شادی کا نقش</h4>
                   <p className="text-gray-700 text-2xl md:text-4xl leading-relaxed font-arabic mb-12 font-medium">اگر آپ اپنی مرضی کی شادی کرنا چاہتے ہیں اور اس میں رکاوٹیں آ رہی ہیں، تو ہمارا خاص تیار کردہ نقش آپ کی تمام مشکلات حل کرنے میں معاون ثابت ہوگا۔ اللہ کے کرم سے راستے ہموار ہو جائیں گے۔</p>
                   <div className="flex justify-start">
-                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-emerald-700 hover:to-emerald-800 text-white font-black rounded-3xl transition-all shadow-2xl text-2xl">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-6 px-14 py-6 bg-emerald-700 hover:bg-emerald-800 text-white font-black rounded-3xl transition-all shadow-lg text-2xl">
                       <i className="fa-brands fa-whatsapp text-4xl"></i> ابھی رابطہ کریں
                     </a>
                   </div>
@@ -264,34 +182,32 @@ const App: React.FC = () => {
               </div>
 
               <div className="max-w-5xl mx-auto flex justify-center pt-8">
-                <a href="https://www.rohaniilajsite.com/page/2/" className="px-12 py-6 bg-spiritual-soft border border-amber-200 rounded-full text-amber-800 font-black hover:scale-105 transition-all flex items-center gap-4 shadow-xl hover:shadow-2xl active:scale-95 text-xl">
-                  <i className="fa-solid fa-angles-left text-2xl"></i> Older Entries
-                </a>
+                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="px-12 py-6 bg-white border border-emerald-200 rounded-full text-emerald-800 font-black hover:bg-emerald-50 transition-all flex items-center gap-4 shadow-md text-xl">
+                  <i className="fa-solid fa-angles-up text-2xl"></i> Back To Top
+                </button>
               </div>
             </div>
           </section>
 
-          {/* Marquee Section */}
-          <section className="bg-gradient-to-r from-emerald-900 via-amber-900 to-yellow-900 py-20 border-y border-white/10 overflow-hidden shadow-inner">
+          {/* Stats Bar */}
+          <section className="bg-[#022c22] py-20 overflow-hidden border-y border-emerald-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="relative">
-                <div className="marquee-container flex items-center">
-                  <div className="flex items-center">
-                    {statsItems.map((stat, idx) => (
-                      <div key={`set1-${idx}`} className="w-[350px] flex-shrink-0 text-center px-10">
-                        <p className="text-6xl font-black text-yellow-400 mb-3 drop-shadow-md">{stat.value}</p>
-                        <p className="text-white/80 text-lg font-black uppercase tracking-[0.3em]">{stat.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="flex items-center">
-                    {statsItems.map((stat, idx) => (
-                      <div key={`set2-${idx}`} className="w-[350px] flex-shrink-0 text-center px-10">
-                        <p className="text-6xl font-black text-yellow-400 mb-3 drop-shadow-md">{stat.value}</p>
-                        <p className="text-white/80 text-lg font-black uppercase tracking-[0.3em]">{stat.label}</p>
-                      </div>
-                    ))}
-                  </div>
+              <div className="marquee-container flex items-center">
+                <div className="flex items-center">
+                  {statsItems.map((stat, idx) => (
+                    <div key={`set1-${idx}`} className="w-[350px] flex-shrink-0 text-center px-10">
+                      <p className="text-6xl font-black text-yellow-400 mb-3">{stat.value}</p>
+                      <p className="text-emerald-100 text-lg font-black uppercase tracking-widest">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center">
+                  {statsItems.map((stat, idx) => (
+                    <div key={`set2-${idx}`} className="w-[350px] flex-shrink-0 text-center px-10">
+                      <p className="text-6xl font-black text-yellow-400 mb-3">{stat.value}</p>
+                      <p className="text-emerald-100 text-lg font-black uppercase tracking-widest">{stat.label}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -300,23 +216,21 @@ const App: React.FC = () => {
           <Services />
 
           {/* Library Section */}
-          <section className="py-24 bg-spiritual-soft">
+          <section className="py-24 bg-[#fefce8]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
-                <h2 className="text-amber-700 font-black uppercase tracking-widest text-sm mb-3">ROHANI LIBRARY</h2>
-                <h3 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">Explore Our Specialized Pages</h3>
-                <p className="text-slate-600 max-w-3xl mx-auto text-2xl md:text-3xl leading-relaxed font-arabic font-medium" dir="rtl">
+                <h2 className="text-emerald-700 font-black uppercase tracking-widest text-sm mb-3">ROHANI LIBRARY</h2>
+                <h3 className="text-5xl md:text-7xl font-black text-emerald-950 mb-8 tracking-tight">Explore Our Specialized Pages</h3>
+                <p className="text-emerald-800/80 max-w-3xl mx-auto text-2xl md:text-3xl leading-relaxed font-arabic font-medium" dir="rtl">
                   مختلف روحانی چیلنجوں کے لیے ہمارے جامع گائیڈز دیکھیں۔ تمام معلومات آپ کی روحانی بہتری کے لیے فراہم کی گئی ہیں۔
                 </p>
-                <div className="w-24 h-2 bg-gradient-to-r from-emerald-500 to-yellow-500 mx-auto rounded-full mt-8 shadow-lg"></div>
+                <div className="w-24 h-2 bg-emerald-700 mx-auto rounded-full mt-8"></div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 group/grid" dir="rtl">
                 {categories.map(cat => (
-                  <button key={cat.id} onClick={() => handlePageChange(cat.id)} className="group relative bg-white border-2 border-amber-50 rounded-[3rem] transition-all duration-700 text-center overflow-hidden p-12 shadow-xl hover:shadow-2xl hover:-translate-y-4 hover:scale-105 hover:z-10 group-hover/grid:opacity-30 group-hover/grid:blur-[2px] hover:!opacity-100 hover:!blur-none">
-                    <div className="relative z-10 flex flex-col items-center">
-                      <span className="font-black text-slate-800 text-3xl md:text-4xl group-hover:text-amber-800 transition-colors tracking-tight font-arabic">{cat.label}</span>
-                      <div className="w-12 h-1.5 bg-gradient-to-r from-emerald-200 to-yellow-200 mt-6 rounded-full group-hover:w-24 group-hover:from-emerald-500 group-hover:to-yellow-500 transition-all duration-500 shadow-sm"></div>
-                    </div>
+                  <button key={cat.id} onClick={() => handlePageChange(cat.id)} className="group bg-white border-2 border-emerald-100 rounded-[2.5rem] transition-all duration-300 text-center p-12 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:bg-emerald-50">
+                    <span className="font-black text-emerald-950 text-3xl md:text-4xl font-arabic">{cat.label}</span>
+                    <div className="w-12 h-1.5 bg-yellow-400 mt-6 rounded-full mx-auto group-hover:w-24 transition-all duration-300"></div>
                   </button>
                 ))}
               </div>
@@ -328,14 +242,13 @@ const App: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="lg:flex items-center gap-20">
                 <div className="lg:w-1/2 mb-16 lg:mb-0 relative">
-                   <div className="absolute -inset-4 bg-gradient-to-br from-emerald-500 via-amber-500 to-yellow-500 rounded-[4rem] opacity-20 blur-2xl animate-pulse"></div>
-                  <img src="https://i.pinimg.com/736x/9a/5e/c8/9a5ec8c6ad99629bb14a27a46a2ec5b0.jpg" alt="About Our Healing" className="rounded-[3.5rem] shadow-2xl relative z-10 w-full border-4 border-white object-cover aspect-square" onError={handleImageError} />
+                  <img src="https://i.pinimg.com/736x/9a/5e/c8/9a5ec8c6ad99629bb14a27a46a2ec5b0.jpg" alt="About Our Healing" className="rounded-[3rem] shadow-2xl relative z-10 w-full border-4 border-emerald-50 object-cover aspect-square" onError={handleImageError} />
                 </div>
                 <div className="lg:w-1/2">
                   <h2 className="text-emerald-700 font-black uppercase tracking-widest text-sm mb-4">Who We Are</h2>
-                  <h3 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight tracking-tight">Pioneers in Spiritual Healing Science</h3>
-                  <p className="text-slate-600 mb-10 text-2xl leading-relaxed font-medium">Founded on the principles of Islamic spirituality, our center has been a beacon of hope for individuals struggling with life's complexities across the globe.</p>
-                  <button className="px-12 py-5 bg-gradient-to-r from-emerald-700 to-amber-700 text-white rounded-[2rem] font-black shadow-2xl hover:scale-105 active:scale-95 transition-all text-xl hover:shadow-emerald-900/40">Read Full Story</button>
+                  <h3 className="text-4xl md:text-6xl font-black text-emerald-950 mb-8 leading-tight">Pioneers in Spiritual Healing Science</h3>
+                  <p className="text-gray-700 mb-10 text-2xl leading-relaxed font-medium">Founded on the principles of Islamic spirituality, our center has been a beacon of hope for individuals struggling with life's complexities across the globe.</p>
+                  <button className="px-12 py-5 bg-emerald-700 text-white rounded-[2rem] font-black shadow-lg hover:bg-emerald-800 transition-all text-xl">Read Full Story</button>
                 </div>
               </div>
             </div>
@@ -349,13 +262,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fdfcf9]">
+    <div className="min-h-screen bg-[#fefce8]">
       {currentPage !== 'admin' && <Navbar onPageChange={handlePageChange} currentPage={currentPage} />}
       <main>{renderContent()}</main>
       {currentPage !== 'admin' && <Footer onPageChange={handlePageChange} />}
       {currentPage !== 'admin' && <ChatAssistant />}
       {currentPage !== 'admin' && (
-        <a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer" className="fixed bottom-10 left-10 z-50 bg-[#25D366] text-white w-20 h-20 rounded-full flex items-center justify-center shadow-[0_20px_50px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all animate-bounce">
+        <a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer" className="fixed bottom-10 left-10 z-50 bg-[#25D366] text-white w-20 h-20 rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all">
           <i className="fa-brands fa-whatsapp text-4xl"></i>
         </a>
       )}

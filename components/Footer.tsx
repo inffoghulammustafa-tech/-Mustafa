@@ -24,8 +24,8 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               </div>
               <h2 className="text-xl font-bold text-white tracking-tight">ROHANI ILAJ</h2>
             </div>
-            <p className="text-sm leading-relaxed mb-6">
-              Our center provides spiritual healing based on Quranic teachings to bring peace, health, and success into your life. We have served thousands of believers worldwide.
+            <p className="text-xl leading-relaxed mb-6 font-arabic text-right" dir="rtl">
+              ہمارا مرکز قرآنی تعلیمات کی روشنی میں روحانی علاج فراہم کرتا ہے تاکہ آپ کی زندگی میں سکون، صحت اور کامیابی آ سکے۔ ہم دنیا بھر میں ہزاروں مومنین کی خدمت کر چکے ہیں۔
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-emerald-600 transition-colors"><i className="fa-brands fa-facebook-f text-sm"></i></a>
@@ -59,7 +59,14 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
                 <i className="fa-solid fa-location-dot text-emerald-500 mt-1"></i>
-                <span>Spiritual Center, Main Road, Rawalpindi, Pakistan</span>
+                <a 
+                  href="https://www.google.com/maps/place/Millat+road+millat+town+faisalabad/data=!4m7!3m6!1s0x392269267eef8369:0xc9fcd41ad587a292!8m2!3d31.4887194!4d73.104319!16s%2Fg%2F11tfzz0s3s!19sChIJaYPvfiZpIjkRkqKH1RrU_Mk?authuser=0&hl=en&rclk=1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-emerald-500 transition-colors"
+                >
+                  Millat road millat town faisalabad
+                </a>
               </li>
               <li className="flex gap-3">
                 <i className="fa-solid fa-phone text-emerald-500"></i>
