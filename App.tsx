@@ -132,7 +132,7 @@ const App: React.FC = () => {
               {/* 2. Black Magic Protection */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
-                  <img src="https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=1200" alt="Black Magic Help" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                  <img src="https://i.pinimg.com/736x/12/7a/fe/127afedd5fd88ea3117cfd9194a5f15b.jpg" alt="Black Magic Help" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
                 <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Black Magic Protection (Noori Ilaj)</h3>
@@ -151,7 +151,7 @@ const App: React.FC = () => {
               {/* 3. UTI Treatment */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
-                  <img src="https://images.unsplash.com/photo-1530213786676-41ad9f7736f6?auto=format&fit=crop&q=80&w=1200" alt="UTI Treatment" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                  <img src="https://i.pinimg.com/1200x/ee/f3/c9/eef3c9dc44ffb72619f389487e0d81c7.jpg" alt="UTI Treatment" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
                 <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Peshab Mein Jalan Ka Ilaj</h3>
@@ -170,7 +170,7 @@ const App: React.FC = () => {
               {/* 4. Kidney Stone */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
-                  <img src="https://images.unsplash.com/photo-1505751172107-5739a0077203?auto=format&fit=crop&q=80&w=1200" alt="Kidney Stone" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                  <img src="https://i.pinimg.com/736x/15/16/6c/15166cd30fb4e5601325ce40272a3bb2.jpg" alt="Kidney Stone" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
                 <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Gurde Ki Pathri Ka Rohani Ilaj</h3>
@@ -208,7 +208,7 @@ const App: React.FC = () => {
               {/* 6. Name Meanings (Hamzad/Spiritual Significance) */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
-                  <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=1200" alt="Name Meanings" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                  <img src="https://i.pinimg.com/736x/9b/95/d5/9b95d54e7a2af50c5c30c0f005db9325.jpg" alt="Name Meanings" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
                 <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Names Meanings & Spiritual Secrets</h3>
@@ -227,7 +227,7 @@ const App: React.FC = () => {
               {/* 7. Family Problems */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
-                  <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1200" alt="Family Problems" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                  <img src="https://i.pinimg.com/736x/a8/9b/97/a89b9750b8a9ead21ebe5c88071cbeff.jpg" alt="Family Problems" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
                 <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Gharelu Jhagron Ka Rohani Hal</h3>
@@ -246,7 +246,7 @@ const App: React.FC = () => {
               {/* 8. Love Marriage Naqsh */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
-                  <img src="https://images.unsplash.com/photo-1516589174184-c685ca33d2b0?auto=format&fit=crop&q=80&w=1200" alt="Love Marriage" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                  <img src="https://i.pinimg.com/736x/12/d5/16/12d516c91db5bc6df814eb07867aa457.jpg" alt="Love Marriage" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
                 <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Naqsh For Love Marriage</h3>
