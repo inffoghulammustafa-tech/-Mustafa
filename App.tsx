@@ -325,7 +325,7 @@ const App: React.FC = () => {
               <div className="lg:flex items-center gap-16">
                 <div className="lg:w-1/2 mb-12 lg:mb-0">
                   <div className="relative">
-                    <img src="https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=800" alt="About Our Healing" className="rounded-3xl shadow-2xl relative z-10 w-full" onError={handleImageError} />
+                    <img src="https://i.pinimg.com/736x/9a/5e/c8/9a5ec8c6ad99629bb14a27a46a2ec5b0.jpg" alt="About Our Healing" className="rounded-3xl shadow-2xl relative z-10 w-full" onError={handleImageError} />
                   </div>
                 </div>
                 <div className="lg:w-1/2">
