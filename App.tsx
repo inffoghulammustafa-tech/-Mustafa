@@ -110,17 +110,150 @@ const App: React.FC = () => {
                 </div>
               ))}
 
-              {/* Hardcoded Featured */}
+              {/* 1. Marriage Solution */}
               <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
                 <div className="w-full">
-                  <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="Marriage Solution" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                  <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200" alt="Marriage Solution" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
                 <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Surah Muzammil Ka Naqsh For Marriage</h3>
                 </div>
                 <div className="w-full p-10 md:p-16 text-right" dir="rtl">
                   <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">روحانی شادی سروسز</h4>
-                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">ایسے افراد جو رشتہ نہ ہو نے سے یا بار باربغیر کسی وجہ کے انکار ہو جانے کی وجہ سے پریشان ہیں۔ ان کے لئے ہمارے روحانی ماہرین نے سورۃ المزمل کا خاص نقش تیار کیا ہے۔..</p>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">ایسے افراد جو رشتہ نہ ہو نے سے یا بار باربغیر کسی وجہ کے انکار ہو جانے کی وجہ سے پریشان ہیں۔ ان کے لئے ہمارے روحانی ماہرین نے سورۃ المزمل کا خاص نقش تیار کیا ہے۔ اس نقش کی برکت سے شادی کی تمام رکاوٹیں ختم ہو جاتی ہیں۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* 2. Black Magic Protection */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=1200" alt="Black Magic Help" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                </div>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Black Magic Protection (Noori Ilaj)</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">کالے جادو کا نوری توڑ</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">اگر آپ کو لگتا ہے کہ آپ پر کسی نے جادو کیا ہے یا آپ کی ترقی رک گئی ہے، تو نوری علم کے ذریعے اس کا مکمل خاتمہ ممکن ہے۔ ہماری دعاؤں اور تعویذات سے آپ کو مستقل تحفظ ملے گا۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3. UTI Treatment */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://images.unsplash.com/photo-1530213786676-41ad9f7736f6?auto=format&fit=crop&q=80&w=1200" alt="UTI Treatment" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                </div>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Peshab Mein Jalan Ka Ilaj</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">پیشاب کی جلن کا روحانی حل</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">پیشاب کی نالی کا انفیکشن یو ٹی آئی ایک عام مگر تکلیف دہ مسئلہ ہے۔ اگر آپ دواؤں کے باوجود آرام نہیں پا رہے تو ہمارا خاص نوری دم اور نقش آپ کی تکلیف دور کرنے میں مددگار ثابت ہوگا۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* 4. Kidney Stone */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://images.unsplash.com/photo-1505751172107-5739a0077203?auto=format&fit=crop&q=80&w=1200" alt="Kidney Stone" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                </div>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Gurde Ki Pathri Ka Rohani Ilaj</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">گردے کی پتھری سے نجات</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">گردے کی پتھری کا درد ناقابل برداشت ہوتا ہے۔ اللہ کے فضل سے مخصوص قرآنی آیات کے دم سے پتھری کے اخراج میں آسانی پیدا ہوتی ہے اور مریض کو شفاء حاصل ہوتی ہے۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5. Uterus Fibroids (Rasoli) */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=1200" alt="Uterus Fibroids" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                </div>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Reham Ki Rasoli Ka Rohani Ilaj</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">رحم کی رسولی کا علاج</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">خواتین کے مخصوص مسائل میں رحم کی رسولی ایک پیچیدہ مسئلہ ہے۔ آپریشن سے ڈرنے والی خواتین کے لئے ہمارے پاس خاص قرآنی دعائیں اور روحانی علاج موجود ہے جس سے رسولی بغیر تکلیف کے ختم ہو سکتی ہے۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* 6. Name Meanings (Hamzad/Spiritual Significance) */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=1200" alt="Name Meanings" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                </div>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Names Meanings & Spiritual Secrets</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">ناموں کے خفیہ روحانی اثرات</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">آپ کا نام آپ کی شخصیت اور تقدیر پر گہرے اثرات ڈالتا ہے۔ اپنے نام کے روحانی معنی، اعداد، اور اس سے وابستہ روحانی موافقت معلوم کرنے کے لئے ہم سے رجوع کریں۔ صحیح نام زندگی میں کامیابی کی کنجی ثابت ہو سکتا ہے۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* 7. Family Problems */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1200" alt="Family Problems" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                </div>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Gharelu Jhagron Ka Rohani Hal</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">گھریلو ناچاقی اور سکون</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">اگر آپ کے گھر میں ہر وقت لڑائی جھگڑا رہتا ہے یا میاں بیوی میں نا اتفاقی ہے، تو ہمارے بتائے گئے وظائف اور دم سے گھر میں سکون اور محبت دوبارہ قائم ہو سکتی ہے۔</p>
+                  <div className="flex justify-start">
+                    <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
+                      <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* 8. Love Marriage Naqsh */}
+              <div className="max-w-5xl mx-auto bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl flex flex-col">
+                <div className="w-full">
+                  <img src="https://images.unsplash.com/photo-1516589174184-c685ca33d2b0?auto=format&fit=crop&q=80&w=1200" alt="Love Marriage" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
+                </div>
+                <div className="w-full bg-emerald-50 py-12 border-b border-emerald-100/50 text-center">
+                  <h3 className="text-emerald-900 text-2xl md:text-4xl font-bold tracking-wide px-6">Naqsh For Love Marriage</h3>
+                </div>
+                <div className="w-full p-10 md:p-16 text-right" dir="rtl">
+                  <h4 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8 font-arabic border-r-4 border-emerald-500 pr-4">پسند کی شادی کا نقش</h4>
+                  <p className="text-gray-700 text-2xl md:text-3xl leading-relaxed font-arabic mb-10">اگر آپ اپنی مرضی کی شادی کرنا چاہتے ہیں اور اس میں رکاوٹیں آ رہی ہیں، تو ہمارا خاص تیار کردہ نقش آپ کی تمام مشکلات حل کرنے میں معاون ثابت ہوگا۔ اللہ کے کرم سے راستے ہموار ہو جائیں گے۔</p>
                   <div className="flex justify-start">
                     <a href="https://wa.me/923000000000" className="inline-flex items-center gap-4 px-12 py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-2xl transition-all shadow-xl text-xl">
                       <i className="fa-brands fa-whatsapp text-3xl"></i> ابھی رابطہ کریں
