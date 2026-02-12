@@ -34,10 +34,10 @@ const App: React.FC = () => {
   };
 
   const categories = [
-    { id: "Rohani Ilaj", label: "روحانی علاج", image: "https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=800" },
+    { id: "Rohani Ilaj", label: "روحانی علاج", image: "https://i.pinimg.com/736x/e7/20/5b/e7205b81b424570057b7a8732b7ead64.jpg" },
     { id: "Free Istikhara", label: "فری استخارہ", image: "https://qiratquran.com/wp-content/uploads/2025/10/dua-e-istikhara.webp" },
     { id: "Love Marriage", label: "پسند کی شادی", image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800" },
-    { id: "Black Magic Help", label: "کالے جادو کا توڑ", image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&q=80&w=800" },
+    { id: "Black Magic Help", label: "کالے جادو کا توڑ", image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&q=80&w=1200" },
     { id: "Family Problems", label: "گھریلو مسائل", image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1200" },
     { id: "Dolat", label: "دولت", image: "https://images.unsplash.com/photo-1518458028434-a23ad7365194?auto=format&fit=crop&q=80&w=800" },
     { id: "health Taweez", label: "صحت کے تعویذ", image: "https://images.unsplash.com/photo-1505751172107-5739a0077203?auto=format&fit=crop&q=80&w=800" },
