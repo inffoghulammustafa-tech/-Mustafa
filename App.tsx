@@ -293,11 +293,11 @@ const App: React.FC = () => {
                 <div className="w-full">
                   <a href="https://www.rohaniilajsite.com/2025/07/30/gurde-pathri-shifa-rohani-ilaj/" target="_blank" rel="noopener noreferrer">
                     <img 
-                      src="https://i.ytimg.com/vi/lG66vN_uL_Y/hq720.jpg" 
+                      src="https://i.ytimg.com/vi/OHR54xQsGL0/maxresdefault.jpg" 
                       alt="Kidney Stone" 
                       referrerPolicy="no-referrer" 
                       onError={handleImageError} 
-                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer" 
+                      className="w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity" 
                     />
                   </a>
                 </div>
@@ -477,9 +477,10 @@ const App: React.FC = () => {
                 <div className="lg:w-1/2 mb-12 lg:mb-0">
                   <div className="relative">
                     <img 
-                      src="https://picsum.photos/seed/meditation/600/700" 
+                      src="https://play-lh.googleusercontent.com/6i-Xci0mr9JJgTwUCw7N5TPOZvl-FHbu3AItv5jf26UEdgunNu9V3FBpuvSoHTTOFq4" 
                       alt="About Our Healing" 
                       className="rounded-3xl shadow-2xl relative z-10 w-full"
+                      onError={handleImageError}
                     />
                   </div>
                 </div>
