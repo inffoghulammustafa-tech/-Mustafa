@@ -72,21 +72,21 @@ const App: React.FC = () => {
         <>
           <Hero />
 
-          <section className="py-24 bg-[#fefce8]">
+          <section className="py-24 spiritual-radiance">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
               <div className="text-center mb-16">
                 <h2 className="text-emerald-700 font-black uppercase tracking-[0.2em] text-sm mb-4">Our Specialization</h2>
                 <h3 className="text-4xl md:text-7xl font-black text-emerald-950 mb-6 tracking-tight">Featured Content</h3>
-                <div className="w-24 h-2 bg-yellow-400 mx-auto rounded-full mb-12"></div>
+                <div className="w-24 h-2 bg-yellow-400 mx-auto rounded-full mb-12 shadow-[0_0_15px_rgba(250,204,21,0.5)]"></div>
               </div>
 
               {/* Dynamic Posts */}
               {customPosts.map(post => (
-                <div key={post.id} className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col group">
+                <div key={post.id} className="max-w-5xl mx-auto bg-glow-surface rounded-[3rem] overflow-hidden border border-yellow-200/50 aura-glow flex flex-col group">
                   <div className="w-full relative">
                     <img src={post.image} alt={post.title} className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                   </div>
-                  <div className="w-full bg-[#f0fdf4] py-12 border-b border-emerald-100 text-center">
+                  <div className="w-full bg-[#f0fdf4]/80 py-12 border-b border-emerald-100/50 text-center">
                     <h3 className="text-emerald-900 text-2xl md:text-5xl font-black tracking-wide px-6">
                       {post.title}
                     </h3>
@@ -106,11 +106,11 @@ const App: React.FC = () => {
               ))}
 
               {/* Box 1 - Marriage */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col cursor-pointer hover:border-emerald-300 transition-colors" onClick={() => handlePageChange('Love Marriage')}>
+              <div className="max-w-5xl mx-auto bg-glow-surface rounded-[3rem] overflow-hidden border border-yellow-200/50 aura-glow flex flex-col cursor-pointer hover:border-emerald-300 transition-colors" onClick={() => handlePageChange('Love Marriage')}>
                 <div className="w-full">
                   <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200" alt="Marriage Solution" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
-                <div className="w-full bg-[#fef9c3] py-12 border-b border-yellow-100 text-center">
+                <div className="w-full bg-[#fef9c3]/50 py-12 border-b border-yellow-100/50 text-center">
                   <h3 className="text-emerald-950 text-2xl md:text-5xl font-black tracking-wide px-6">Surah Muzammil Ka Naqsh For Marriage</h3>
                 </div>
                 <div className="w-full p-10 md:p-20 text-right" dir="rtl">
@@ -125,11 +125,11 @@ const App: React.FC = () => {
               </div>
 
               {/* Box 2 - Black Magic */}
-              <div className="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden border border-emerald-100 shadow-xl flex flex-col cursor-pointer hover:border-emerald-300 transition-colors" onClick={() => handlePageChange('Black Magic Help')}>
+              <div className="max-w-5xl mx-auto bg-glow-surface rounded-[3rem] overflow-hidden border border-yellow-200/50 aura-glow flex flex-col cursor-pointer hover:border-emerald-300 transition-colors" onClick={() => handlePageChange('Black Magic Help')}>
                 <div className="w-full">
                   <img src="https://i.pinimg.com/736x/12/7a/fe/127afedd5fd88ea3117cfd9194a5f15b.jpg" alt="Black Magic Help" className="w-full h-auto object-cover max-h-[600px]" onError={handleImageError} />
                 </div>
-                <div className="w-full bg-[#f0fdf4] py-12 border-b border-emerald-100 text-center">
+                <div className="w-full bg-[#f0fdf4]/50 py-12 border-b border-emerald-100/50 text-center">
                   <h3 className="text-emerald-950 text-2xl md:text-5xl font-black tracking-wide px-6">Black Magic Protection (Noori Ilaj)</h3>
                 </div>
                 <div className="w-full p-10 md:p-20 text-right" dir="rtl">
@@ -144,7 +144,7 @@ const App: React.FC = () => {
               </div>
 
               <div className="max-w-5xl mx-auto flex justify-center pt-8">
-                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="px-12 py-6 bg-white border border-emerald-200 rounded-full text-emerald-800 font-black hover:bg-emerald-50 transition-all flex items-center gap-4 shadow-md text-xl">
+                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="px-12 py-6 bg-glow-surface border border-yellow-200 rounded-full text-emerald-800 font-black hover:bg-yellow-50 transition-all flex items-center gap-4 aura-glow text-xl">
                   <i className="fa-solid fa-angles-up text-2xl"></i> Back To Top
                 </button>
               </div>
@@ -152,13 +152,13 @@ const App: React.FC = () => {
           </section>
 
           {/* Stats Bar */}
-          <section className="bg-[#022c22] py-20 overflow-hidden border-y border-emerald-800">
+          <section className="bg-[#022c22] py-20 overflow-hidden border-y border-emerald-800 shadow-[inset_0_0_50px_rgba(0,0,0,0.3)]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="marquee-container flex items-center">
                 <div className="flex items-center">
                   {statsItems.map((stat, idx) => (
                     <div key={`set1-${idx}`} className="w-[350px] flex-shrink-0 text-center px-10">
-                      <p className="text-6xl font-black text-yellow-400 mb-3">{stat.value}</p>
+                      <p className="text-6xl font-black text-yellow-400 mb-3 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">{stat.value}</p>
                       <p className="text-emerald-100 text-lg font-black uppercase tracking-widest">{stat.label}</p>
                     </div>
                   ))}
@@ -166,7 +166,7 @@ const App: React.FC = () => {
                 <div className="flex items-center">
                   {statsItems.map((stat, idx) => (
                     <div key={`set2-${idx}`} className="w-[350px] flex-shrink-0 text-center px-10">
-                      <p className="text-6xl font-black text-yellow-400 mb-3">{stat.value}</p>
+                      <p className="text-6xl font-black text-yellow-400 mb-3 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">{stat.value}</p>
                       <p className="text-emerald-100 text-lg font-black uppercase tracking-widest">{stat.label}</p>
                     </div>
                   ))}
@@ -178,21 +178,24 @@ const App: React.FC = () => {
           <Services />
 
           {/* Library Section */}
-          <section className="py-24 bg-[#fefce8]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section className="py-24 spiritual-radiance relative">
+             {/* Glowing orb decoration */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-400/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="text-center mb-16">
                 <h2 className="text-emerald-700 font-black uppercase tracking-widest text-sm mb-3">ROHANI LIBRARY</h2>
                 <h3 className="text-5xl md:text-7xl font-black text-emerald-950 mb-8 tracking-tight">Explore Our Specialized Pages</h3>
                 <p className="text-emerald-800/80 max-w-3xl mx-auto text-2xl md:text-3xl leading-relaxed font-arabic font-medium" dir="rtl">
                   مختلف روحانی چیلنجوں کے لیے ہمارے جامع گائیڈز دیکھیں۔ تمام معلومات آپ کی روحانی بہتری کے لیے فراہم کی گئی ہیں۔
                 </p>
-                <div className="w-24 h-2 bg-emerald-700 mx-auto rounded-full mt-8"></div>
+                <div className="w-24 h-2 bg-emerald-700 mx-auto rounded-full mt-8 shadow-[0_0_10px_rgba(6,78,59,0.3)]"></div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 group/grid" dir="rtl">
                 {categories.map(cat => (
-                  <button key={cat.id} onClick={() => handlePageChange(cat.id)} className="group bg-white border-2 border-emerald-100 rounded-[2.5rem] transition-all duration-300 text-center p-12 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:bg-emerald-50">
+                  <button key={cat.id} onClick={() => handlePageChange(cat.id)} className="group bg-glow-surface border-2 border-yellow-200/50 rounded-[2.5rem] transition-all duration-300 text-center p-12 aura-glow hover:shadow-[0_30px_60px_-12px_rgba(6,78,59,0.15)] hover:-translate-y-2 hover:border-emerald-200">
                     <span className="font-black text-emerald-950 text-3xl md:text-4xl font-arabic">{cat.label}</span>
-                    <div className="w-12 h-1.5 bg-yellow-400 mt-6 rounded-full mx-auto group-hover:w-24 transition-all duration-300"></div>
+                    <div className="w-12 h-1.5 bg-yellow-400 mt-6 rounded-full mx-auto group-hover:w-24 transition-all duration-300 shadow-[0_0_10px_rgba(250,204,21,0.5)]"></div>
                   </button>
                 ))}
               </div>
@@ -200,11 +203,12 @@ const App: React.FC = () => {
           </section>
 
           {/* About Section */}
-          <section id="about" className="py-24 bg-white relative overflow-hidden">
+          <section id="about" className="py-24 bg-glow-surface relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="lg:flex items-center gap-20">
                 <div className="lg:w-1/2 mb-16 lg:mb-0 relative">
-                  <img src="https://i.pinimg.com/736x/9a/5e/c8/9a5ec8c6ad99629bb14a27a46a2ec5b0.jpg" alt="About Our Healing" className="rounded-[3rem] shadow-2xl relative z-10 w-full border-4 border-emerald-50 object-cover aspect-square" onError={handleImageError} />
+                   <div className="absolute -inset-4 bg-yellow-400/20 rounded-[3.5rem] blur-2xl"></div>
+                  <img src="https://i.pinimg.com/736x/9a/5e/c8/9a5ec8c6ad99629bb14a27a46a2ec5b0.jpg" alt="About Our Healing" className="rounded-[3rem] aura-glow relative z-10 w-full border-4 border-white/50 object-cover aspect-square" onError={handleImageError} />
                 </div>
                 <div className="lg:w-1/2">
                   <h2 className="text-emerald-700 font-black uppercase tracking-widest text-sm mb-4">Who We Are</h2>
@@ -224,13 +228,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fefce8]">
+    <div className="min-h-screen bg-glow-surface">
       {currentPage !== 'admin' && <Navbar onPageChange={handlePageChange} currentPage={currentPage} />}
       <main>{renderContent()}</main>
       {currentPage !== 'admin' && <Footer onPageChange={handlePageChange} />}
       {currentPage !== 'admin' && <ChatAssistant />}
       {currentPage !== 'admin' && (
-        <a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer" className="fixed bottom-10 left-10 z-50 bg-[#25D366] text-white w-20 h-20 rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all">
+        <a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer" className="fixed bottom-10 left-10 z-50 bg-[#25D366] text-white w-20 h-20 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all">
           <i className="fa-brands fa-whatsapp text-4xl"></i>
         </a>
       )}

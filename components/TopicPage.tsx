@@ -116,26 +116,22 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
   useEffect(() => {
     const fetchContent = async () => {
       setLoading(true);
-      
-      // Check if topic exists in our system (direct match or case insensitive)
       const systemTopic = Object.keys(specialContent).find(k => k.toLowerCase() === topic.toLowerCase());
 
       if (systemTopic) {
         setContent(specialContent[systemTopic].text);
         setImageUrl(specialContent[systemTopic].img);
-        await new Promise(r => setTimeout(r, 800)); // Smooth transition
+        await new Promise(r => setTimeout(r, 800));
         setLoading(false);
         return;
       }
 
-      // AI Fallback if not in system
       try {
         const prompt = `براہ کرم عنوان: "${topic}" پر ایک جامع، پیشہ ورانہ اور روحانی طور پر حوصلہ افزا مضمون اردو میں لکھیں۔ مواد کو ہیڈنگز اور بلٹ پوائنٹس کے ساتھ ترتیب دیں۔ لہجہ انتہائی احترام والا اور پر امید ہونا چاہیے۔`;
         const [textResult, imageResult] = await Promise.all([
           getSpiritualGuidance(prompt),
           !initialImage ? generateImageForTopic(topic) : Promise.resolve(null)
         ]);
-
         setContent(textResult);
         if (!initialImage && imageResult) setImageUrl(imageResult);
       } catch (err) {
@@ -147,21 +143,21 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
   }, [topic, initialImage]);
 
   return (
-    <div className="pt-32 pb-20 bg-[#fefce8] min-h-screen" dir="rtl">
+    <div className="pt-32 pb-20 spiritual-radiance min-h-screen" dir="rtl">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <button onClick={onBack} className="flex items-center gap-4 text-emerald-900 font-black mb-10 hover:gap-6 transition-all font-arabic text-2xl group">
           <i className="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
           واپس ہوم پیج پر جائیں
         </button>
 
-        <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-emerald-50">
+        <div className="bg-glow-surface rounded-[3rem] aura-glow overflow-hidden border border-yellow-200/50">
           <div className="bg-[#064e3b] p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
             <span className="relative z-10 inline-block px-6 py-2 bg-black/20 text-yellow-300 text-xs font-black tracking-widest uppercase rounded-full mb-8 font-arabic">
               روحانی رہنمائی و مشورہ
             </span>
             <h1 className="relative z-10 text-5xl md:text-7xl font-black text-white mb-8 leading-tight font-arabic">{topic}</h1>
-            <div className="relative z-10 w-24 h-2 bg-yellow-400 mx-auto rounded-full"></div>
+            <div className="relative z-10 w-24 h-2 bg-yellow-400 mx-auto rounded-full shadow-[0_0_15px_rgba(250,204,21,0.5)]"></div>
           </div>
 
           {imageUrl && (

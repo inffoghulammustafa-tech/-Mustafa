@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ onPageChange, currentPage }) => {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <nav className="fixed w-full z-50 bg-[#fffcf0]/80 backdrop-blur-xl border-b border-yellow-200/50 shadow-[0_10px_30px_-10px_rgba(6,78,59,0.1)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => handleLinkClick('home')}>
@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ onPageChange, currentPage }) => {
               <button onMouseEnter={() => setShowDropdown(true)} className={`flex items-center gap-1 font-semibold transition-colors ${currentPage !== 'home' && currentPage !== 'services' && currentPage !== 'admin' ? 'text-emerald-600' : 'text-emerald-900 hover:text-emerald-600'}`}>
                 Our Pages <i className="fa-solid fa-chevron-down text-[10px] mt-0.5"></i>
               </button>
-              <div onMouseLeave={() => setShowDropdown(false)} className={`absolute top-full left-0 w-64 bg-white border border-gray-100 shadow-2xl rounded-2xl py-3 transition-all duration-200 ${showDropdown ? 'opacity-100 visible translate-y-2' : 'opacity-0 invisible translate-y-0'}`}>
+              <div onMouseLeave={() => setShowDropdown(false)} className={`absolute top-full left-0 w-64 bg-glow-surface border border-yellow-100/50 shadow-2xl rounded-2xl py-3 transition-all duration-200 ${showDropdown ? 'opacity-100 visible translate-y-2' : 'opacity-0 invisible translate-y-0'}`}>
                 <div className="max-h-[70vh] overflow-y-auto px-2 space-y-1">
                   {topics.map(topic => (
                     <button key={topic} onClick={() => handleLinkClick(topic)} className="block w-full text-left px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 rounded-xl transition-colors">{topic}</button>
@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ onPageChange, currentPage }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 max-h-[85vh] overflow-y-auto animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden bg-glow-surface border-b border-yellow-100 max-h-[85vh] overflow-y-auto animate-in slide-in-from-top duration-300">
           <div className="px-4 pt-2 pb-8 space-y-1">
             <button onClick={() => handleLinkClick('home')} className="block w-full text-left px-4 py-4 text-emerald-900 hover:bg-emerald-50 rounded-xl font-bold border-b border-gray-50">Home</button>
             <button onClick={() => handleLinkClick('admin')} className="block w-full text-left px-4 py-4 text-slate-600 hover:bg-slate-50 rounded-xl font-bold border-b border-gray-50">Admin Panel</button>

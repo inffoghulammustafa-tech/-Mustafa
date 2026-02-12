@@ -13,9 +13,23 @@
         window.process = { env: { API_KEY: "" } };
     </script>
     <style>
+        :root {
+            --glow-bg: #fffcf0;
+            --spiritual-emerald: #064e3b;
+            --glow-gold: rgba(250, 204, 21, 0.15);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
+            background-color: var(--glow-bg);
         }
+        
+        /* Global Glow Surface */
+        .bg-glow-surface {
+            background: radial-gradient(circle at center, #ffffff 0%, #fffbeb 100%);
+            box-shadow: 0 0 40px rgba(6, 78, 59, 0.05);
+        }
+
         .font-arabic {
             font-family: 'Amiri', serif;
         }
@@ -23,17 +37,13 @@
             font-family: 'Cormorant Garamond', serif;
         }
 
-        /* Themed Solid Colors */
-        .bg-spiritual-gradient {
-            background-color: #064e3b;
-        }
-        
-        .bg-spiritual-soft {
-            background-color: #fefce8;
+        /* Aura Shadow for Glow Effect */
+        .aura-glow {
+            box-shadow: 0 20px 50px -12px rgba(6, 78, 59, 0.12), 0 0 20px rgba(250, 204, 21, 0.1);
         }
 
-        .text-gradient {
-            color: #065f46;
+        .bg-spiritual-gradient {
+            background-color: #064e3b;
         }
 
         /* Marquee Animation */
@@ -87,6 +97,17 @@
         .animate-soft-pulse {
             animation: soft-pulse 3s infinite ease-in-out;
         }
+        
+        /* New Radiance Effect */
+        @keyframes radiance-bg {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .spiritual-radiance {
+            background: linear-gradient(-45deg, #fffbeb, #ffffff, #f0fff4, #fffbeb);
+            background-size: 400% 400%;
+            animation: radiance-bg 15s ease infinite;
+        }
     </style>
 <script type="importmap">
 {
@@ -100,7 +121,7 @@
 </script>
 <script type="module" src="./index.tsx"></script>
 </head>
-<body class="bg-[#fefce8] text-gray-900 overflow-x-hidden">
+<body class="spiritual-radiance text-gray-900 overflow-x-hidden">
     <div id="root"></div>
 </body>
 </html>
