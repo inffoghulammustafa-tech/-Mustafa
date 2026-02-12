@@ -1,7 +1,18 @@
 
 import React from 'react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onPageChange?: (page: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
+  const handleNav = (page: string) => {
+    if (onPageChange) {
+      onPageChange(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-gray-300 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,7 +37,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-bold mb-6">Quick Links</h3>
             <ul className="space-y-4 text-sm">
-              <li><a href="#home" className="hover:text-emerald-500 transition-colors">Home</a></li>
+              <li><button onClick={() => handleNav('home')} className="hover:text-emerald-500 transition-colors">Home</button></li>
               <li><a href="#services" className="hover:text-emerald-500 transition-colors">Our Services</a></li>
               <li><a href="#about" className="hover:text-emerald-500 transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-emerald-500 transition-colors">Privacy Policy</a></li>
@@ -36,10 +47,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-bold mb-6">Services</h3>
             <ul className="space-y-4 text-sm">
-              <li><a href="#" className="hover:text-emerald-500 transition-colors">Free Istikhara</a></li>
-              <li><a href="#" className="hover:text-emerald-500 transition-colors">Love Marriage</a></li>
-              <li><a href="#" className="hover:text-emerald-500 transition-colors">Black Magic Help</a></li>
-              <li><a href="#" className="hover:text-emerald-500 transition-colors">Family Problems</a></li>
+              <li><button onClick={() => handleNav('Free Istikhara')} className="hover:text-emerald-500 transition-colors text-left">Free Istikhara</button></li>
+              <li><button onClick={() => handleNav('Love Marriage')} className="hover:text-emerald-500 transition-colors text-left">Love Marriage</button></li>
+              <li><button onClick={() => handleNav('Black Magic Help')} className="hover:text-emerald-500 transition-colors text-left">Black Magic Help</button></li>
+              <li><button onClick={() => handleNav('Family Problems')} className="hover:text-emerald-500 transition-colors text-left">Family Problems</button></li>
             </ul>
           </div>
 

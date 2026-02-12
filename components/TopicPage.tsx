@@ -13,17 +13,75 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
   const [imageUrl, setImageUrl] = useState<string | null>(initialImage || null);
   const [loading, setLoading] = useState(true);
 
+  // Mapping for specific content provided by user
+  const specialContent: Record<string, { text: string, img: string }> = {
+    'Free Istikhara': {
+      img: 'https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=1200',
+      text: `# فری استخارہ
+اس پیج کا مقصد لوگوں کی مشکلات میں ان کی رہنمائی کرنا ہے۔
+استخارہ کا اصل مطلب اللہ سے خیر مانگنا ہے۔ اپنی زندگی کے اہم فیصلوں میں اللہ کی رضا شامل کریں۔ ہم فی سبیل اللہ (فری) استخارہ کر کے آپ کو صحیح راستہ دکھائیں گے۔
+
+## استخارہ کی اہمیت
+استخارہ سنتِ نبوی ہے جس کے ذریعے بندہ اللہ تعالیٰ سے اپنے معاملے میں خیر کا طلب گار ہوتا ہے۔ یہ پریشانیوں اور تذبذب سے نکلنے کا بہترین روحانی ذریعہ ہے۔
+
+## رابطہ کا طریقہ
+آپ ہم سے براہ راست واٹس ایپ پر رابطہ کر کے اپنا نام اور مقصد بیان کر سکتے ہیں۔ ہم وقت کی پابندی اور رازداری کے ساتھ آپ کی رہنمائی کریں گے۔`
+    },
+    'Love Marriage': {
+      img: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200',
+      text: `# پسند کی شادی (Love Marriage)
+شادی ایک مقدس رشتہ ہے اور اس میں آنے والی رکاوٹوں کا حل قرآن و سنت کی روشنی میں ممکن ہے۔ ہمارا رویہ اس معاملے میں ہمدردانہ ہے کیونکہ یہ ایک جذباتی فیصلہ ہوتا ہے۔
+
+## رکاوٹوں کا خاتمہ
+ماں باپ کو منانے کے لئے روحانی حل اور رکاوٹوں کو دور کرنے کے مخصوص وظائف فراہم کیے جاتے ہیں۔ اکثر معاشرتی دباؤ یا غلط فہمیوں کی وجہ سے رشتے طے نہیں پاتے، جنہیں دعا کے ذریعے حل کیا جا سکتا ہے۔
+
+## کامیابی کی مثالیں
+ہمارے پاس کثیر تعداد میں ایسے جوڑے ہیں جو روحانی رہنمائی کے بعد آج ایک خوشحال ازدواجی زندگی گزار رہے ہیں۔`
+    },
+    'Black Magic Help': {
+      img: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=1200',
+      text: `# جادو کا توڑ (Noori Ilaj)
+جادو ایک کڑوا سچ ہے لیکن اس کا توڑ قرآنِ پاک میں موجود ہے۔ ہم "کالے جادو" کے بجائے "نوری علاج" پر زور دیتے ہیں تاکہ اللہ کے کلام سے شفا ملے۔
+
+## جادو کی علامات
+اگر آپ کو نیند نہیں آتی، ہر وقت سستی رہتی ہے، یا بنتے ہوئے کام اچانک رک جاتے ہیں، تو یہ جادو یا نظرِ بد کی علامت ہو سکتی ہے۔
+
+## روحانی تحفظ
+سورہ فلق اور سورہ ناس کی برکت سے جادو کا مکمل خاتمہ ممکن ہے۔ ہم آپ کو حفاظت کے لئے خاص دعائیں، دم اور تعویذ فراہم کرتے ہیں تاکہ آپ کا مستقبل محفوظ رہے۔`
+    },
+    'Family Problems': {
+      img: 'https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80&w=1200',
+      text: `# گھریلو ناچاقی (Family Problems)
+گھر کو جنت بنانے کے لئے روحانی تدبیر اور صبر کی ضرورت ہے۔ سکونِ قلب ہی وہ بنیاد ہے جس پر ایک مضبوط خاندان کھڑا ہوتا ہے۔
+
+## مسائل کا حل
+میاں بیوی کے جھگڑے، سسرال کے مسائل، اور بچوں کی نافرمانی جیسے سنجیدہ معاملات کے لئے ہمارے پاس خاص روحانی کونسلنگ موجود ہے۔
+
+## گھر کی برکت
+گھر سے نحوست اور منفی اثرات ختم کرنے کا مسنون طریقہ اپنائیں۔ مخصوص وظائف کے ذریعے آپ اپنے گھر میں دوبارہ وہی سکون اور محبت واپس لا سکتے ہیں جو ایک مثالی خاندان کا خاصہ ہے۔`
+    }
+  };
+
   useEffect(() => {
     const fetchContent = async () => {
       setLoading(true);
       
-      // Fetch Content in Urdu
+      // Check if it's one of the specific pages requested by the user
+      if (specialContent[topic]) {
+        setContent(specialContent[topic].text);
+        if (!initialImage) {
+          setImageUrl(specialContent[topic].img);
+        }
+        setLoading(false);
+        return;
+      }
+
+      // Fetch Content in Urdu via Gemini for other pages
       const prompt = `براہ کرم عنوان: "${topic}" پر ایک جامع، پیشہ ورانہ اور روحانی طور پر حوصلہ افزا مضمون اردو میں لکھیں۔ 
       اس میں یہ بیان کریں کہ یہ کیا ہے، روحانی علاج میں اس کی اہمیت کیا ہے، اس سے وابستہ عام علامات یا چیلنجز کیا ہیں، 
       اور قرآنی رہنمائی، دعاؤں اور روحانی مشقوں کے ذریعے اسے کیسے حل کیا جا سکتا ہے۔ 
       مواد کو ہیڈنگز اور بلٹ پوائنٹس کے ساتھ ترتیب دیں۔ لہجہ انتہائی احترام والا اور پر امید ہونا چاہیے۔`;
       
-      // We only generate a new image if one wasn't provided initially
       const [textResult, imageResult] = await Promise.all([
         getSpiritualGuidance(prompt),
         !initialImage ? generateImageForTopic(topic) : Promise.resolve(null)
@@ -94,7 +152,7 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
                   paragraph.trim() ? (
                     <div key={idx} className="mb-6 last:mb-0">
                       {paragraph.startsWith('#') ? (
-                        <h2 className="text-3xl md:text-4xl font-black text-emerald-950 mt-10 mb-6 border-r-8 border-emerald-500 pr-6 text-right">
+                        <h2 className={`${paragraph.startsWith('##') ? 'text-2xl md:text-3xl' : 'text-3xl md:text-4xl'} font-black text-emerald-950 mt-10 mb-6 border-r-8 border-emerald-500 pr-6 text-right`}>
                           {paragraph.replace(/#/g, '').trim()}
                         </h2>
                       ) : (

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
@@ -509,7 +510,7 @@ const App: React.FC = () => {
     <div className="min-h-screen">
       <Navbar onPageChange={handlePageChange} currentPage={currentPage} />
       <main>{renderContent()}</main>
-      <Footer />
+      <Footer onPageChange={handlePageChange} />
       <ChatAssistant />
       <a 
         href="https://wa.me/923000000000" 
