@@ -24,16 +24,16 @@ const Hero: React.FC = () => {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-yellow-400/10 rounded-full blur-[120px] animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-400/10 rounded-full blur-[120px] animate-pulse delay-700"></div>
         
-        {/* Animated Background Duas - Made very subtle (opacity-5) */}
+        {/* Animated Background Duas - Increased visibility (opacity-25) and added floating animation */}
         <div className="absolute inset-0 flex items-center justify-center">
           {backgroundDuas.map((dua, index) => (
             <div
               key={index}
               className={`absolute text-center transition-all duration-[3000ms] ease-in-out font-arabic pointer-events-none select-none
-                ${index === duaIndex ? 'opacity-5 scale-110 translate-y-0 blur-none' : 'opacity-0 scale-90 translate-y-10 blur-xl'}
+                ${index === duaIndex ? 'opacity-25 scale-110 translate-y-0 blur-none animate-floating-text' : 'opacity-0 scale-90 translate-y-10 blur-xl'}
               `}
             >
-              <span className="text-white text-[8vw] md:text-[6vw] font-bold leading-none drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+              <span className="text-white text-[8vw] md:text-[6vw] font-bold leading-none drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]">
                 {dua}
               </span>
             </div>
