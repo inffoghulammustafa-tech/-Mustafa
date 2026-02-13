@@ -1,40 +1,89 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
+  const [duaIndex, setDuaIndex] = useState(0);
+  const backgroundDuas = [
+    "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَکِیلُ",
+    "لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَکَ إِنِّی کُنْتُ مِنَ الظَّالِمِینَ",
+    "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDuaIndex((prev) => (prev + 1) % backgroundDuas.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#064e3b]">
-      {/* Background patterns - simplified */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-300 rounded-full blur-[100px]"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400 rounded-full blur-[100px]"></div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
+    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 overflow-hidden bg-[#064e3b]">
+      {/* Background patterns and Animated Duas */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Glowing Orbs */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-yellow-400/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-400/10 rounded-full blur-[120px] animate-pulse delay-700"></div>
+        
+        {/* Animated Background Duas */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          {backgroundDuas.map((dua, index) => (
+            <div
+              key={index}
+              className={`absolute text-center transition-all duration-[3000ms] ease-in-out font-arabic pointer-events-none select-none
+                ${index === duaIndex ? 'opacity-10 scale-110 translate-y-0 blur-none' : 'opacity-0 scale-90 translate-y-10 blur-xl'}
+              `}
+            >
+              <span className="text-white text-[8vw] md:text-[6vw] font-bold leading-none drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                {dua}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Texture Overlay */}
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')] opacity-20"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center">
-          <div className="max-w-4xl">
-            <span className="inline-block px-5 py-2 mb-8 text-sm font-black tracking-widest text-yellow-300 uppercase bg-black/20 rounded-full border border-yellow-300/20 backdrop-blur-sm">
-              Trusted Spiritual Excellence
+          <div className="max-w-5xl">
+            <span className="inline-block px-6 py-2 mb-8 text-sm font-black tracking-[0.3em] text-yellow-300 uppercase bg-black/30 rounded-full border border-yellow-300/30 backdrop-blur-md aura-glow font-arabic">
+              قابل اعتماد روحانی مرکز
             </span>
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight">
-              Restore Your Peace <br className="hidden md:block" />
-              Through <span className="text-yellow-300 italic">Rohani Ilaj</span>
+            
+            <h1 className="text-5xl md:text-9xl font-black text-white mb-10 leading-[1.15] font-arabic drop-shadow-2xl" dir="rtl">
+              روحانی علاج کے ذریعے <br className="hidden md:block" />
+              اپنے <span className="text-yellow-400 italic underline decoration-yellow-400/30">سکون کو بحال</span> کریں
             </h1>
-            <p className="text-xl md:text-3xl text-yellow-50/90 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
-              Authentic spiritual solutions for marriage, health, protection, and success. Guided by divine principles.
+            
+            <p className="text-2xl md:text-4xl text-yellow-50/90 mb-14 max-w-4xl mx-auto leading-relaxed font-arabic font-medium" dir="rtl">
+              شادی، صحت، تحفظ اور کامیابی کے لیے مستند روحانی حل۔ الٰہی اصولوں کے مطابق رہنمائی۔
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="https://wa.me/923000000000" className="px-12 py-6 bg-yellow-400 hover:bg-yellow-300 text-emerald-950 font-black rounded-[2rem] transition-all transform hover:-translate-y-1 shadow-lg flex items-center justify-center gap-4 text-xl">
-                <i className="fa-brands fa-whatsapp text-3xl"></i>
-                Consult Now
+            
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+              <a 
+                href="https://wa.me/923000000000" 
+                className="group px-14 py-7 bg-yellow-400 hover:bg-yellow-300 text-emerald-950 font-black rounded-[2.5rem] transition-all transform hover:-translate-y-2 shadow-[0_20px_40px_rgba(250,204,21,0.3)] flex items-center justify-center gap-5 text-2xl font-arabic"
+              >
+                <i className="fa-brands fa-whatsapp text-4xl group-hover:rotate-12 transition-transform"></i>
+                ابھی مشورہ کریں
               </a>
-              <a href="#services" className="px-12 py-6 bg-white/5 hover:bg-white/10 text-white font-black rounded-[2rem] backdrop-blur-md transition-all border border-white/20 flex items-center justify-center text-xl">
-                Our Services
+              <a 
+                href="#services" 
+                className="px-14 py-7 bg-white/5 hover:bg-white/10 text-white font-black rounded-[2.5rem] backdrop-blur-xl transition-all border border-white/20 flex items-center justify-center text-2xl font-arabic hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+              >
+                ہماری خدمات
               </a>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Bottom Wave decoration */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 opacity-20 pointer-events-none">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[100px] fill-white">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
       </div>
     </section>
   );
