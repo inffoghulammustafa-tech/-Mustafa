@@ -38,14 +38,14 @@ const AdminPanel: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Strictly enforcing Mustafa / Mustafame with trim for reliability
+    // Strictly enforcing admin / admin123 with trim for reliability
     const cleanUser = username.trim();
     const cleanPass = password.trim();
 
-    if (cleanUser === 'Mustafa' && cleanPass === 'Mustafame') {
+    if (cleanUser === 'admin' && cleanPass === 'admin123') {
       setIsLoggedIn(true);
     } else {
-      alert('Ghalat Maalomat! Baraye meherbani sahi Admin Name (Mustafa) aur Code (Mustafame) darj karein.');
+      alert('Ghalat Maalomat! Baraye meherbani sahi Admin Name (admin) aur Code (admin123) darj karein.');
     }
   };
 
@@ -104,7 +104,7 @@ const AdminPanel: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className="w-full px-6 py-4 bg-emerald-50/50 border-2 border-emerald-100 rounded-2xl focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 outline-none transition-all font-bold text-emerald-900"
-                placeholder="Mustafa"
+                placeholder="admin"
               />
             </div>
             <div>
@@ -114,7 +114,7 @@ const AdminPanel: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-6 py-4 bg-emerald-50/50 border-2 border-emerald-100 rounded-2xl focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 outline-none transition-all font-bold text-emerald-900"
-                placeholder="••••••••"
+                placeholder="admin123"
               />
             </div>
             <button type="submit" className="w-full py-5 bg-emerald-800 hover:bg-emerald-700 text-white font-black rounded-2xl shadow-[0_15px_30px_rgba(6,78,59,0.3)] transition-all active:scale-95 text-xl">
@@ -178,14 +178,14 @@ const AdminPanel: React.FC<{ onBack: () => void }> = ({ onBack }) => {
             <h2 className="text-2xl font-black text-slate-900 capitalize tracking-tight">
               {activeTab === 'overview' ? 'Command Center' : activeTab === 'add' ? (editingId ? 'Edit Article' : 'Compose Article') : 'Content Manager'}
             </h2>
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mt-1">Logged in as Mustafa</p>
+            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mt-1">Logged in as Administrator</p>
           </div>
           <div className="flex items-center gap-6">
             <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-700 shadow-inner">
               <i className="fa-solid fa-bell"></i>
             </div>
             <div className="w-14 h-14 bg-slate-900 rounded-3xl flex items-center justify-center text-white shadow-xl group cursor-pointer overflow-hidden border-2 border-white">
-              <img src="https://rohanilaj.com/wp-content/uploads/2025/01/Rohani-Ilaj-Logo-Design.png" className="w-full h-full object-contain p-2" alt="Mustafa" />
+              <img src="https://rohanilaj.com/wp-content/uploads/2025/01/Rohani-Ilaj-Logo-Design.png" className="w-full h-full object-contain p-2" alt="Admin" />
             </div>
           </div>
         </header>
