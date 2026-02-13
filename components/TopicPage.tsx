@@ -15,6 +15,23 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
 
   // The "System" - Predefined high-quality Urdu content
   const specialContent: Record<string, { text: string, img: string }> = {
+    'Privacy Policy': {
+      img: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=1200',
+      text: `# پرائیویسی پالیسی (Privacy Policy)
+ہمارا ادارہ آپ کی رازداری کا مکمل احترام کرتا ہے اور آپ کی معلومات کے تحفظ کے لیے پرعزم ہے۔
+
+## معلومات کا استعمال
+آپ کی فراہم کردہ معلومات (جیسے نام، تاریخِ پیدائش، یا مسائل) صرف استخارہ اور روحانی مشورے کے لیے استعمال کی جاتی ہیں۔ ہم آپ کا ڈیٹا کسی تیسرے فریق کے ساتھ شیئر نہیں کرتے۔
+
+## رازداری کی ضمانت
+روحانی علاج کے دوران ہونے والی گفتگو اور آپ کے ذاتی معاملات مکمل طور پر خفیہ رکھے جاتے ہیں۔
+
+## واٹس ایپ رابطہ
+جب آپ ہم سے واٹس ایپ پر رابطہ کرتے ہیں، تو آپ کا موبائل نمبر صرف آپ کی رہنمائی اور فالو اپ کے لیے محفوظ کیا جاتا ہے۔
+
+## ہمارے اصول
+ہم صرف جائز اور شرعی مقاصد کے لیے روحانی خدمت فراہم کرتے ہیں۔ غیر شرعی یا نقصان دہ مقاصد کے لیے ہم سے رجوع نہ کریں۔`
+    },
     'Free Istikhara': {
       img: 'https://qiratquran.com/wp-content/uploads/2025/10/dua-e-istikhara.webp',
       text: `# فری استخارہ
@@ -100,7 +117,7 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, initialImage, onBack }) =>
 خونی رشتوں اور دوستی میں آئی دراڑیں ختم کرنے کا حل۔`
     },
     'Rohani Ilaj': {
-      img: 'https://images.unsplash.com/photo-1594950195709-a14f66c242d7?auto=format&fit=crop&q=80&w=1200',
+      img: 'https://i.pinimg.com/736x/e7/20/5b/e7205b81b424570057b7a8732b7ead64.jpg',
       text: `# مکمل روحانی علاج (Rohani Ilaj)
 ہر مشکل کا حل اللہ کے کلام میں موجود ہے۔
 ہم آپ کو قرآن و سنت کے مطابق روحانی رہنمائی فراہم کرتے ہیں۔

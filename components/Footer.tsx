@@ -6,10 +6,27 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
-  const handleNav = (page: string) => {
-    if (onPageChange) {
-      onPageChange(page);
+  const handleNav = (item: string) => {
+    if (!onPageChange) return;
+
+    if (item === 'Home') {
+      onPageChange('home');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (item === 'Our Services') {
+      onPageChange('home');
+      // Small timeout to ensure App has rendered the home sections
+      setTimeout(() => {
+        const el = document.getElementById('services');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else if (item === 'About Us') {
+      onPageChange('home');
+      setTimeout(() => {
+        const el = document.getElementById('about');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else if (item === 'Privacy Policy') {
+      onPageChange('Privacy Policy');
     }
   };
 
@@ -25,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
           
           {/* Brand Section */}
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="flex items-center gap-4 cursor-pointer group" onClick={() => handleNav('home')}>
+            <div className="flex items-center gap-4 cursor-pointer group" onClick={() => handleNav('Home')}>
               <div className="w-14 h-14 bg-emerald-700 rounded-2xl flex items-center justify-center text-yellow-400 text-2xl shadow-xl group-hover:rotate-12 transition-transform duration-500">
                 <i className="fa-solid fa-moon"></i>
               </div>
@@ -62,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               {['Home', 'Our Services', 'About Us', 'Privacy Policy'].map((item) => (
                 <li key={item}>
                   <button 
-                    onClick={() => item === 'Home' ? handleNav('home') : null}
+                    onClick={() => handleNav(item)}
                     className="footer-link hover:text-yellow-400 transition-colors uppercase text-[11px] tracking-widest"
                   >
                     {item}
@@ -82,7 +99,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               {['Free Istikhara', 'Love Marriage', 'Black Magic Help', 'Family Problems'].map((service) => (
                 <li key={service}>
                   <button 
-                    onClick={() => handleNav(service)} 
+                    onClick={() => onPageChange?.(service)} 
                     className="footer-link hover:text-yellow-400 transition-colors uppercase text-[11px] tracking-widest text-left"
                   >
                     {service}
@@ -104,7 +121,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                   <i className="fa-solid fa-location-dot"></i>
                 </div>
                 <a 
-                  href="https://www.google.com/maps/place/Millat+road+millat+town+faisalabad/data=!4m7!3m6!1s0x392269267eef8369:0xc9fcd41ad587a292!8m2!3d31.4887194!4d73.104319!16s%2Fg%2F11tfzz0s3s!19sChIJaYPvfiZpIjkRkqKH1RrU_Mk?authuser=0&hl=en&rclk=1" 
+                  href="https://www.google.com/maps/place/Millat+road+millat+town+faisalabad" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm font-medium leading-relaxed group-hover:text-white transition-colors"
