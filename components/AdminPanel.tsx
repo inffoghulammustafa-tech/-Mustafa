@@ -38,10 +38,11 @@ const AdminPanel: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === 'admin' && password === 'admin') {
+    // Updated credentials as requested: Mustafa / Mustafame
+    if (username === 'Mustafa' && password === 'Mustafame') {
       setIsLoggedIn(true);
     } else {
-      alert('Invalid credentials. Use admin/admin');
+      alert('Invalid credentials. Please enter correct Admin Name and Code.');
     }
   };
 
@@ -93,17 +94,17 @@ const AdminPanel: React.FC<{ onBack: () => void }> = ({ onBack }) => {
           </div>
           <form onSubmit={handleLogin} className="p-8 space-y-6">
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2">Username</label>
+              <label className="block text-sm font-bold text-slate-700 mb-2">Admin Name</label>
               <input 
                 type="text" 
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
-                placeholder="admin"
+                placeholder="Enter Name"
               />
             </div>
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2">Password</label>
+              <label className="block text-sm font-bold text-slate-700 mb-2">Admin Code</label>
               <input 
                 type="password" 
                 value={password}
@@ -174,7 +175,7 @@ const AdminPanel: React.FC<{ onBack: () => void }> = ({ onBack }) => {
           </h2>
           <div className="flex items-center gap-4">
             <div className="text-right hidden sm:block">
-              <p className="text-sm font-bold text-slate-900">Rohani Master</p>
+              <p className="text-sm font-bold text-slate-900">Mustafa</p>
               <p className="text-[10px] text-emerald-600 font-bold uppercase tracking-widest">Administrator</p>
             </div>
             <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center">
