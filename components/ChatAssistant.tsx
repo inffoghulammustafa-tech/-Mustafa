@@ -6,7 +6,7 @@ import { getSpiritualGuidance } from '../services/geminiService.ts';
 const ChatAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: 'Assalamu Alaikum! I am your Rohani assistant. How can I help you today?', timestamp: new Date() }
+    { role: 'model', text: 'Assalamu Alaikum! I am your Rohani assistant. How can I help you find peace today?', timestamp: new Date() }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -22,56 +22,73 @@ const ChatAssistant: React.FC = () => {
     if (!input.trim()) return;
 
     const userMsg: ChatMessage = { role: 'user', text: input, timestamp: new Date() };
-    setMessages(prev => [...prev, userMsg]);
+    const newHistory = [...messages, userMsg];
+    
+    setMessages(newHistory);
     setInput('');
     setIsTyping(true);
 
-    const aiResponse = await getSpiritualGuidance(input);
+    // Pass the entire history for context-aware AI replies
+    const aiResponse = await getSpiritualGuidance(newHistory);
     
     setIsTyping(false);
     setMessages(prev => [...prev, { role: 'model', text: aiResponse, timestamp: new Date() }]);
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[60]">
-      {/* Toggle Button */}
+    <div className="fixed bottom-10 right-10 z-[60]">
+      {/* Toggle Button - Matching the teal color from the user's screenshot */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-16 h-16 rounded-full flex items-center justify-center text-white shadow-2xl transition-all transform hover:scale-110 active:scale-95 ${isOpen ? 'bg-red-500' : 'bg-emerald-600'}`}
+        className={`w-20 h-20 rounded-full flex items-center justify-center text-white shadow-[0_15px_40px_rgba(13,148,136,0.3)] transition-all transform hover:scale-110 active:scale-95 animate-soft-pulse ${isOpen ? 'bg-red-500' : 'bg-[#0d9488]'}`}
       >
-        <i className={`fa-solid ${isOpen ? 'fa-times' : 'fa-comment-dots'} text-2xl`}></i>
+        <i className={`fa-solid ${isOpen ? 'fa-times' : 'fa-comment-dots'} text-3xl`}></i>
       </button>
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="absolute bottom-20 right-0 w-[350px] sm:w-[400px] h-[500px] bg-white rounded-3xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-in slide-in-from-bottom duration-300">
+        <div className="absolute bottom-24 right-0 w-[380px] sm:w-[450px] h-[600px] bg-white rounded-[2.5rem] shadow-2xl border border-teal-100 flex flex-col overflow-hidden animate-in slide-in-from-bottom duration-300">
           {/* Header */}
-          <div className="bg-emerald-700 p-4 flex items-center gap-3">
-            <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white">
-              <i className="fa-solid fa-moon"></i>
+          <div className="bg-[#0d9488] p-6 flex items-center gap-4 relative">
+             <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
+            <div className="w-12 h-12 bg-teal-500 rounded-2xl flex items-center justify-center text-white shadow-inner relative z-10">
+              <i className="fa-solid fa-mosque"></i>
             </div>
-            <div>
-              <h4 className="text-white font-bold leading-none">Rohani Advisor</h4>
-              <p className="text-emerald-200 text-xs mt-1">Available to guide you</p>
+            <div className="relative z-10">
+              <h4 className="text-white font-black leading-none text-lg">Rohani Advisor AI</h4>
+              <p className="text-teal-100 text-xs mt-1.5 flex items-center gap-1.5 font-bold">
+                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                Always Available for Guidance
+              </p>
             </div>
+            <button onClick={() => setIsOpen(false)} className="ml-auto text-teal-100 hover:text-white transition-colors relative z-10">
+              <i className="fa-solid fa-chevron-down"></i>
+            </button>
           </div>
 
           {/* Messages */}
-          <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+          <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 space-y-6 bg-[#f8fafc]">
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[80%] p-3 rounded-2xl text-sm shadow-sm ${msg.role === 'user' ? 'bg-emerald-600 text-white rounded-br-none' : 'bg-white text-gray-800 rounded-bl-none border border-gray-200'}`}>
+                <div className={`
+                  max-w-[85%] p-5 rounded-[2rem] text-sm md:text-base leading-relaxed shadow-sm
+                  ${msg.role === 'user' 
+                    ? 'bg-[#0d9488] text-white rounded-br-none font-bold' 
+                    : 'bg-white text-slate-800 rounded-bl-none border border-slate-100 font-arabic text-right text-lg'
+                  }
+                `}
+                dir={msg.role === 'model' ? 'rtl' : 'ltr'}>
                   {msg.text}
                 </div>
               </div>
             ))}
             {isTyping && (
               <div className="flex justify-start">
-                <div className="bg-white border border-gray-200 p-3 rounded-2xl rounded-bl-none">
-                  <div className="flex gap-1">
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-100"></div>
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-200"></div>
+                <div className="bg-white border border-slate-100 p-5 rounded-[2rem] rounded-bl-none shadow-sm">
+                  <div className="flex gap-2">
+                    <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce delay-100"></div>
+                    <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce delay-200"></div>
                   </div>
                 </div>
               </div>
@@ -79,24 +96,27 @@ const ChatAssistant: React.FC = () => {
           </div>
 
           {/* Input */}
-          <div className="p-4 bg-white border-t border-gray-100 flex gap-2">
-            <input 
-              type="text" 
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-              placeholder="Type your spiritual query..."
-              className="flex-1 bg-gray-100 border-none focus:ring-2 focus:ring-emerald-500 rounded-xl px-4 py-2 text-sm outline-none"
-            />
-            <button 
-              onClick={handleSend}
-              className="w-10 h-10 bg-emerald-700 text-white rounded-xl flex items-center justify-center hover:bg-emerald-800 transition-colors"
-            >
-              <i className="fa-solid fa-paper-plane"></i>
-            </button>
+          <div className="p-6 bg-white border-t border-slate-100">
+            <div className="flex gap-3 bg-slate-50 p-2 rounded-3xl border border-slate-200">
+              <input 
+                type="text" 
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+                placeholder="Ask for spiritual advice..."
+                className="flex-1 bg-transparent border-none focus:ring-0 px-4 py-3 text-sm font-bold text-slate-700 outline-none"
+              />
+              <button 
+                onClick={handleSend}
+                disabled={!input.trim()}
+                className="w-12 h-12 bg-[#0d9488] text-white rounded-2xl flex items-center justify-center hover:bg-teal-700 transition-all shadow-md active:scale-90 disabled:opacity-50 disabled:scale-100"
+              >
+                <i className="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
           </div>
-          <div className="px-4 pb-2 bg-white text-[10px] text-center text-gray-400">
-            General guidance only. For specific Istikhara, use WhatsApp.
+          <div className="px-6 pb-4 bg-white text-[10px] text-center text-slate-400 font-bold uppercase tracking-widest">
+            AI can provide general guidance. For personalized Istikhara, use WhatsApp.
           </div>
         </div>
       )}
