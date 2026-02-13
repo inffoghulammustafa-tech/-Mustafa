@@ -96,28 +96,31 @@ const Services: React.FC = () => {
           <div className="w-24 h-2 bg-emerald-500 mx-auto rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 group/services">
           {SERVICES.map((service) => (
             <div 
               key={service.id} 
               className={`
-                relative bg-glow-surface p-10 md:p-12 rounded-[2.5rem] border ${colorMap[service.color].border}
-                transition-all duration-500 aura-glow hover:-translate-y-2 group
-                overflow-hidden
+                relative bg-glow-surface p-10 md:p-12 rounded-[3rem] border ${colorMap[service.color].border}
+                transition-all duration-500 aura-glow group overflow-hidden
+                group-hover/services:opacity-50 group-hover/services:blur-[2px] group-hover/services:scale-[0.98]
+                hover:!opacity-100 hover:!blur-none hover:!scale-105 hover:-translate-y-4 hover:z-20 hover:border-emerald-400
               `}
             >
+              {/* BIG Icon Fixed to Upper LEFT Corner */}
               <div className={`
-                absolute top-8 right-8 w-14 h-14 rounded-full 
-                flex items-center justify-center transition-all duration-500 
-                group-hover:scale-[1.8] group-hover:rotate-12 group-hover:-translate-x-4 group-hover:translate-y-4
-                shadow-sm group-hover:shadow-xl
+                absolute top-6 left-6 w-24 h-24 rounded-3xl 
+                flex items-center justify-center transition-all duration-700 
+                group-hover:scale-125 group-hover:rotate-[-12deg]
+                shadow-sm group-hover:shadow-2xl group-hover:shadow-emerald-500/20
                 ${colorMap[service.color].iconBg} ${colorMap[service.color].iconText}
               `}>
-                <i className={`${service.icon} text-2xl transition-transform duration-500 group-hover:scale-110`}></i>
+                <i className={`${service.icon} text-5xl transition-transform duration-700`}></i>
               </div>
 
-              <div className="relative z-10 pt-4">
-                <h4 className="text-2xl font-bold text-[#0B1B32] mb-6 pr-12 transition-colors group-hover:text-emerald-900">
+              {/* Increased top padding to accommodate the larger icon */}
+              <div className="relative z-10 pt-32">
+                <h4 className="text-3xl font-black text-[#0B1B32] mb-6 transition-colors group-hover:text-emerald-900">
                   {service.title}
                 </h4>
                 <p className="text-gray-500 leading-relaxed mb-10 text-lg group-hover:text-gray-600">
@@ -136,9 +139,10 @@ const Services: React.FC = () => {
                 </div>
               </div>
 
+              {/* Decorative Background Glow */}
               <div className={`
-                absolute -bottom-20 -left-20 w-40 h-40 rounded-full blur-[60px] opacity-0
-                group-hover:opacity-30 transition-opacity duration-700
+                absolute -bottom-24 -right-24 w-48 h-48 rounded-full blur-[80px] opacity-0
+                group-hover:opacity-40 transition-opacity duration-700
                 ${service.color === 'emerald' ? 'bg-emerald-400' : ''}
                 ${service.color === 'pink' ? 'bg-pink-400' : ''}
                 ${service.color === 'indigo' ? 'bg-indigo-400' : ''}
