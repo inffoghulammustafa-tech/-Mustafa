@@ -24,16 +24,16 @@ const Hero: React.FC = () => {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-yellow-400/10 rounded-full blur-[120px] animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-400/10 rounded-full blur-[120px] animate-pulse delay-700"></div>
         
-        {/* Animated Background Duas - Increased visibility (opacity-25) and added floating animation */}
+        {/* Animated Background Duas - Changed color to amber-500 and increased opacity to 40% for a "darker" look */}
         <div className="absolute inset-0 flex items-center justify-center">
           {backgroundDuas.map((dua, index) => (
             <div
               key={index}
               className={`absolute text-center transition-all duration-[3000ms] ease-in-out font-arabic pointer-events-none select-none
-                ${index === duaIndex ? 'opacity-25 scale-110 translate-y-0 blur-none animate-floating-text' : 'opacity-0 scale-90 translate-y-10 blur-xl'}
+                ${index === duaIndex ? 'opacity-40 scale-110 translate-y-0 blur-none animate-floating-text' : 'opacity-0 scale-90 translate-y-10 blur-xl'}
               `}
             >
-              <span className="text-white text-[8vw] md:text-[6vw] font-bold leading-none drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]">
+              <span className="text-amber-500 text-[8vw] md:text-[6vw] font-bold leading-none drop-shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
                 {dua}
               </span>
             </div>
@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
               Peace Through <span className="text-yellow-400 italic underline decoration-yellow-400/30">Rohani Ilaj</span>
             </h1>
             
-            {/* Description Text - Translated to Urdu as requested */}
+            {/* Description Text */}
             <p className="text-2xl md:text-4xl text-yellow-50/90 mb-14 max-w-4xl mx-auto leading-relaxed font-arabic font-medium" dir="rtl">
               شادی، صحت، تحفظ اور کامیابی کے لیے مستند روحانی حل۔ الٰہی اصولوں کے مطابق رہنمائی۔
             </p>
