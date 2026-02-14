@@ -7,6 +7,7 @@ import ChatAssistant from './components/ChatAssistant.tsx';
 import Footer from './components/Footer.tsx';
 import TopicPage from './components/TopicPage.tsx';
 import AdminPanel from './components/AdminPanel.tsx';
+import CustomCursor from './components/CustomCursor.tsx';
 
 interface CustomPost {
   id: string;
@@ -252,6 +253,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-glow-surface">
+      <CustomCursor />
       {currentPage !== 'admin' && <Navbar onPageChange={handlePageChange} currentPage={currentPage} />}
       <main>{renderContent()}</main>
       {currentPage !== 'admin' && <Footer onPageChange={handlePageChange} />}
